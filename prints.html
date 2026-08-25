@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downloadable & Printed Art Prints — Doctor Paints</title>
+<meta name="description" content="Hand-painted art prints available as an instant digital download in two sizes, or as a printed / framed copy delivered via Porter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="prints">
+
+<div id="site-header"></div>
+
+<section class="section section--tight">
+  <div class="container">
+    <span class="eyebrow">Prints</span>
+    <h1>Downloadable & Framed Art Prints</h1>
+    <p class="lede" style="max-width:60ch;">Every design below is hand-painted first, then digitised. Buy the instant digital download, or let us print and frame it for you — delivered locally by Porter.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="grid grid--4" id="printsGrid"></div>
+  </div>
+</section>
+
+<section class="section section--alt" id="paper-guide">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Before you buy</span>
+      <h2>Sizes & paper guide</h2>
+      <p>Two sizes to choose from, and everything you need to print it perfectly at home or at a lab.</p>
+    </div>
+    <div class="grid grid--2" style="margin-bottom:28px;">
+      <div class="cat-card" style="flex-direction:row;align-items:center;padding:20px;gap:16px;">
+        <div class="art-block art--1" style="width:80px;height:80px;border-radius:12px;font-size:.9rem;flex-shrink:0;">A4</div>
+        <div><h3 style="margin-bottom:4px;">A4 — 21 x 29.7 cm</h3><p style="margin:0;font-size:.88rem;">Desk shelves, small gallery walls, gifting.</p></div>
+      </div>
+      <div class="cat-card" style="flex-direction:row;align-items:center;padding:20px;gap:16px;">
+        <div class="art-block art--5" style="width:80px;height:80px;border-radius:12px;font-size:.9rem;flex-shrink:0;">A3</div>
+        <div><h3 style="margin-bottom:4px;">A3 — 29.7 x 42 cm</h3><p style="margin:0;font-size:.88rem;">A statement piece above a sofa, bed or console.</p></div>
+      </div>
+    </div>
+    <div class="paper-guide" id="paperGuide"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Printed or framed copies</span>
+      <h2>Want us to print it for you?</h2>
+      <p>Choose "Printed Only" or "Framed & Printed" on any design. Since larger framed pieces need careful, padded delivery, we use Porter for safe hand-delivery within city limits.</p>
+    </div>
+    <div class="note-box" id="porterNote" style="max-width:70ch;"></div>
+  </div>
+</section>
+
+<!-- Product configurator modal -->
+<div class="cart-overlay" id="printOverlay" onclick="closePrintModal()"></div>
+<div class="cart-drawer" id="printModal" style="width:480px;">
+  <div class="cart-head">
+    <h3 style="margin:0;" id="pmTitle">Design</h3>
+    <button class="cart-close" onclick="closePrintModal()">✕</button>
+  </div>
+  <div style="padding:20px 24px;overflow-y:auto;flex:1;">
+    <div class="art-block" id="pmArt" style="border-radius:14px;margin-bottom:16px;"><span id="pmArtLabel"></span></div>
+    <p id="pmBlurb" style="font-size:.9rem;"></p>
+
+    <div class="option-group">
+      <label class="group-label">Format</label>
+      <div class="option-row" id="pmFormatRow"></div>
+    </div>
+
+    <div class="option-group">
+      <label class="group-label">Size</label>
+      <div class="option-row" id="pmSizeRow"></div>
+    </div>
+
+    <div class="note-box" id="pmPorterNote" style="display:none;"></div>
+
+    <div class="option-group" style="margin-top:20px;">
+      <label class="group-label">Quantity</label>
+      <div class="qty-row">
+        <button onclick="pmChangeQty(-1)">−</button>
+        <input type="text" id="pmQty" value="1" readonly>
+        <button onclick="pmChangeQty(1)">+</button>
+      </div>
+    </div>
+  </div>
+  <div class="cart-foot" style="display:block;">
+    <div class="cart-subtotal"><span>Price</span><span id="pmPrice">₹0</span></div>
+    <button class="btn btn--primary btn--block" onclick="pmAddToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/prints.js"></script>
+</body>
+</html>

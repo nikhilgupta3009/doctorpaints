@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motivation Word Art — Doctor Paints</title>
+<meta name="description" content="Bold hand-lettered motivational word art — RISE, INSPIRE, GROW and more — as a digital download or printed / framed copy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="motivation">
+
+<div id="site-header"></div>
+
+<section class="section section--tight">
+  <div class="container">
+    <span class="eyebrow">Motivation</span>
+    <h1>Words worth waking up to</h1>
+    <p class="lede" style="max-width:60ch;">Bold, hand-lettered word art for the wall you look at every morning. Same sizes and paper guide as our prints — see the <a href="prints.html#paper-guide" style="color:var(--terracotta);font-weight:600;">full paper guide here</a>.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="grid grid--3" id="motivationGrid"></div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Don't see your word?</span>
+      <h2>We'll hand-letter any word or short phrase</h2>
+      <p>Tell us the word on WhatsApp and we'll quote it in the same three formats.</p>
+    </div>
+    <div style="text-align:center;">
+      <a class="btn btn--wa" target="_blank" rel="noopener" id="motivationWaBtn">Request a custom word on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- Product configurator modal (shared pattern with prints.js) -->
+<div class="cart-overlay" id="printOverlay" onclick="closePrintModal()"></div>
+<div class="cart-drawer" id="printModal" style="width:480px;">
+  <div class="cart-head">
+    <h3 style="margin:0;" id="pmTitle">Word</h3>
+    <button class="cart-close" onclick="closePrintModal()">✕</button>
+  </div>
+  <div style="padding:20px 24px;overflow-y:auto;flex:1;">
+    <div class="art-block" id="pmArt" style="border-radius:14px;margin-bottom:16px;"><span id="pmArtLabel"></span></div>
+
+    <div class="option-group">
+      <label class="group-label">Format</label>
+      <div class="option-row" id="pmFormatRow"></div>
+    </div>
+
+    <div class="option-group">
+      <label class="group-label">Size</label>
+      <div class="option-row" id="pmSizeRow"></div>
+    </div>
+
+    <div class="note-box" id="pmPorterNote" style="display:none;"></div>
+
+    <div class="option-group" style="margin-top:20px;">
+      <label class="group-label">Quantity</label>
+      <div class="qty-row">
+        <button onclick="pmChangeQty(-1)">−</button>
+        <input type="text" id="pmQty" value="1" readonly>
+        <button onclick="pmChangeQty(1)">+</button>
+      </div>
+    </div>
+  </div>
+  <div class="cart-foot" style="display:block;">
+    <div class="cart-subtotal"><span>Price</span><span id="pmPrice">₹0</span></div>
+    <button class="btn btn--primary btn--block" onclick="pmAddToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/motivation.js"></script>
+</body>
+</html>

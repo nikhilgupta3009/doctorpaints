@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & FAQ — Doctor Paints</title>
+<meta name="description" content="Get in touch with Doctor Paints, and find answers on shipping, Porter delivery, printing and custom orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.faq-item { border-bottom: 1px solid var(--line); padding: 20px 0; }
+.faq-item h3 { margin-bottom: 8px; font-size: 1.05rem; }
+.faq-item p { margin: 0; }
+</style>
+</head>
+<body data-page="contact">
+
+<div id="site-header"></div>
+
+<section class="section section--tight">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h1>We'd love to hear from you</h1>
+    <p class="lede">Questions about an order, a custom piece, or just want to say hi.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="grid grid--3">
+      <a class="cat-card" style="padding:26px;" href="https://wa.me/919999999999" target="_blank" rel="noopener">
+        <h3>WhatsApp</h3>
+        <p>Fastest way to reach us — for orders, quotes and questions.</p>
+        <span class="btn btn--wa btn--sm">Chat with us</span>
+      </a>
+      <a class="cat-card" style="padding:26px;" href="mailto:hello@doctorpaints.in">
+        <h3>Email</h3>
+        <p>hello@doctorpaints.in — usually reply within 24 hours.</p>
+        <span class="btn btn--outline btn--sm">Send an email</span>
+      </a>
+      <a class="cat-card" style="padding:26px;" href="https://instagram.com/doctorpaints" target="_blank" rel="noopener">
+        <h3>Instagram</h3>
+        <p>Follow along for new designs and behind-the-scenes painting.</p>
+        <span class="btn btn--outline btn--sm">@doctorpaints</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="faq">
+  <div class="container" style="max-width:760px;">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Shipping, Porter delivery & printing</h2>
+    </div>
+
+    <div class="faq-item">
+      <h3>How does Porter delivery work?</h3>
+      <p id="faqPorter"></p>
+    </div>
+    <div class="faq-item">
+      <h3>What sizes are available?</h3>
+      <p>All ready-made prints and word art come in A4 (21 x 29.7 cm) and A3 (29.7 x 42 cm). Custom "Story in a Frame" pieces can be made to any size on request.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I print the digital download myself?</h3>
+      <p>Yes — see our full <a href="prints.html#paper-guide" style="color:var(--terracotta);font-weight:600;">paper & printing guide</a>. In short: 200–300 GSM matte or cotton paper at 300 DPI gives the truest result.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How long do custom pieces take?</h3>
+      <p>Custom alphabets take 3–10 days depending on tier. "Story in a Frame" pieces start with a concept sketch within 2–3 days, then 7–14 days to complete after you approve it.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you ship outside the Porter cities?</h3>
+      <p>Yes — anywhere in India via a tracked courier at a flat ₹149 for printed or framed pieces. Digital downloads are delivered by email instantly, anywhere in the world.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I pay?</h3>
+      <p>We confirm your order and final price (including any delivery charge) on WhatsApp, then share a UPI / payment link before we begin.</p>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("faqPorter").textContent = PORTER_NOTE;
+  });
+</script>
+</body>
+</html>

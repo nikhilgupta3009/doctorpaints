@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Story in a Frame — Custom Illustrated Wall Art — Doctor Paints</title>
+<meta name="description" content="Tell us what you love — your people, your places, your memories — and we'll hand-paint it into one custom illustrated keepsake.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="story">
+
+<div id="site-header"></div>
+
+<section class="hero" style="padding-bottom:20px;">
+  <div class="container" style="display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;">
+    <div>
+      <span class="eyebrow">Fully custom · One of one</span>
+      <h1>Your story, painted into one frame.</h1>
+      <p class="lede">Your favourite people, your city, your dog, that one running joke — tell us what makes your world yours, and we'll hand-illustrate it into a single keepsake piece, built only for you.</p>
+      <div class="hero-ctas">
+        <a href="#storyForm" class="btn btn--primary">Start Telling Your Story</a>
+        <a href="#examples" class="btn btn--outline">See Example Themes</a>
+      </div>
+    </div>
+    <div class="hero-art art--4">
+      <span>Every element, chosen by you</span>
+      <div class="tag">Starting ₹1,999</div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" id="examples">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Example themes</span>
+      <h2>A few ways past customers have told their story</h2>
+    </div>
+    <div class="grid grid--4">
+      <div class="cat-card">
+        <div class="art-block art--1"><span>Us, Through the Years</span></div>
+        <div class="cat-body"><h3>Us, Through the Years</h3><p>A couple's timeline — first date, the proposal, your first home.</p></div>
+      </div>
+      <div class="cat-card">
+        <div class="art-block art--5"><span>Map of Everywhere We've Been</span></div>
+        <div class="cat-body"><h3>Map of Us</h3><p>Every city and trip that matters, illustrated on one custom map.</p></div>
+      </div>
+      <div class="cat-card">
+        <div class="art-block art--2"><span>My Whole Little World</span></div>
+        <div class="cat-body"><h3>My Whole Little World</h3><p>Pets, hobbies, plants and comfort objects, all in one scene.</p></div>
+      </div>
+      <div class="cat-card">
+        <div class="art-block art--6"><span>Our Family Tree</span></div>
+        <div class="cat-body"><h3>Family Tree of Memories</h3><p>Three generations, favourite sayings and shared traditions.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">How it works</span>
+      <h2>From your story to your wall</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Tell us</h3><p>Fill in the story form below — as much or as little detail as you like.</p></div>
+      <div class="step"><div class="num">2</div><h3>We sketch</h3><p>We share a concept sketch and a fixed quote within 2–3 days.</p></div>
+      <div class="step"><div class="num">3</div><h3>You approve</h3><p>Tweak colours, elements or layout until it feels exactly right.</p></div>
+      <div class="step"><div class="num">4</div><h3>We deliver</h3><p>Digital file instantly, or a printed / framed piece via Porter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="storyForm">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Tell your story</span>
+      <h2>Start your custom piece</h2>
+      <p>This isn't a checkout — it's the start of a conversation. Fill this in and we'll follow up with a concept and quote.</p>
+    </div>
+
+    <div class="form-card" style="max-width:760px;">
+      <div class="field-row">
+        <div class="field">
+          <label>Your name</label>
+          <input type="text" id="sName" placeholder="Full name">
+        </div>
+        <div class="field">
+          <label>WhatsApp number or email</label>
+          <input type="text" id="sContact" placeholder="Where should we reach you?">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>What's the occasion?</label>
+        <select id="sOccasion">
+          <option>Just because</option>
+          <option>Anniversary</option>
+          <option>Wedding / Engagement</option>
+          <option>Birthday</option>
+          <option>Housewarming</option>
+          <option>Farewell / Memorial</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Tell us your story</label>
+        <textarea id="sStory" placeholder="Who or what is this piece for? Share the people, places, memories or in-jokes you'd like woven in — the more detail, the better." style="min-height:140px;"></textarea>
+      </div>
+
+      <div class="field">
+        <label>Elements you'd like included</label>
+        <div class="checkbox-row" id="sElements">
+          <label><input type="checkbox" value="People/portraits"> People / portraits</label>
+          <label><input type="checkbox" value="Pets"> Pets</label>
+          <label><input type="checkbox" value="Places/cities"> Places / cities</label>
+          <label><input type="checkbox" value="Hobbies"> Hobbies</label>
+          <label><input type="checkbox" value="A favourite quote"> A favourite quote</label>
+          <label><input type="checkbox" value="Important dates"> Important dates</label>
+          <label><input type="checkbox" value="Plants/flowers"> Plants / flowers</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Colour palette preference</label>
+        <div class="swatch-row" id="sSwatches"></div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label>Preferred size</label>
+          <select id="sSize">
+            <option value="a4">A4 — 21 x 29.7 cm</option>
+            <option value="a3" selected>A3 — 29.7 x 42 cm</option>
+            <option value="custom">Custom size (tell us below)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Format</label>
+          <select id="sFormat">
+            <option value="digital">Digital download</option>
+            <option value="print">Printed only</option>
+            <option value="framed" selected>Framed & printed</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Anything else? Reference photos to share?</label>
+        <textarea id="sNotes" placeholder="Mention if you have reference photos — you can send them to us directly on WhatsApp after submitting this form."></textarea>
+      </div>
+
+      <div class="note-box" style="margin-bottom:20px;">
+        Starting price is <strong>₹1,999</strong> and depends on the number of elements and size. Framed pieces include Porter / courier delivery, confirmed with your final quote. No payment is taken here — this just starts the conversation.
+      </div>
+
+      <button class="btn btn--wa btn--block" onclick="submitStoryForm()">Send My Story on WhatsApp</button>
+      <p style="text-align:center;font-size:.8rem;margin-top:14px;">Prefer email? <a href="#" id="storyEmailLink" style="color:var(--terracotta);font-weight:600;">Send it to us instead</a></p>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/story-frame.js"></script>
+</body>
+</html>

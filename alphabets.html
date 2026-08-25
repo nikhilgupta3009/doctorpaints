@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customized Alphabets — Basic, Customized & Premium — Doctor Paints</title>
+<meta name="description" content="Hand-lettered custom alphabets in three tiers — Basic, Customized and Premium — personalised with your colours, motifs and story.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="alphabets">
+
+<div id="site-header"></div>
+
+<section class="section section--tight">
+  <div class="container">
+    <span class="eyebrow">Custom Alphabets</span>
+    <h1>Hand-lettered initials, personalised your way</h1>
+    <p class="lede" style="max-width:60ch;">One letter, endless ways to make it yours. Pick a tier below, then build your order.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="tier-compare" id="tierCompare"></div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Build your order</span>
+      <h2>Tell us about your letter(s)</h2>
+      <p>We'll confirm the final design concept with you on WhatsApp or email before we start painting.</p>
+    </div>
+
+    <div class="product-layout">
+      <div>
+        <div class="art-block art--3" style="border-radius:20px;" id="alphaPreview"><span>Your custom letter</span></div>
+        <div class="note-box" style="margin-top:16px;">
+          <strong>How pricing works:</strong> each tier is priced per letter. Ordering a full name? Just set quantity to the number of letters — we'll treat it as one cohesive set and you can note the exact word below.
+        </div>
+      </div>
+
+      <div class="buy-box">
+        <div class="form-card">
+          <div class="option-group">
+            <label class="group-label">Tier</label>
+            <div class="option-row" id="alphaTierRow"></div>
+          </div>
+
+          <div class="field">
+            <label>Letter(s) or name</label>
+            <input type="text" id="alphaWord" placeholder="e.g. R or RIYA">
+            <div class="hint">Enter the full word if you'd like each letter individually painted as a set.</div>
+          </div>
+
+          <div class="field">
+            <label>Number of letters (quantity)</label>
+            <div class="qty-row">
+              <button onclick="alphaChangeQty(-1)">−</button>
+              <input type="text" id="alphaQty" value="1" readonly>
+              <button onclick="alphaChangeQty(1)">+</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Accent colour</label>
+            <div class="swatch-row" id="alphaSwatches"></div>
+          </div>
+
+          <div class="field" id="alphaMotifField">
+            <label>Motif / pattern preference <span style="font-weight:400;color:var(--ink-soft);">(Customized & Premium)</span></label>
+            <input type="text" id="alphaMotif" placeholder="e.g. florals, dots, a small dog, mountains…">
+          </div>
+
+          <div class="field">
+            <label>Anything else we should know?</label>
+            <textarea id="alphaNotes" placeholder="Occasion, delivery date needed by, format (digital / printed / framed)…"></textarea>
+          </div>
+
+          <div class="price-tag" id="alphaPrice">₹349</div>
+          <button class="btn btn--primary btn--block" onclick="alphaAddToCart()">Add to Cart</button>
+          <div class="note-box">Format (digital, printed or framed) and delivery / Porter charges for physical copies are confirmed at WhatsApp checkout.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/alphabets.js"></script>
+</body>
+</html>
