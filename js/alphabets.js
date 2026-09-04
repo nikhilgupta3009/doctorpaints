@@ -2,9 +2,9 @@
    More by Shilpi — customized alphabets: tier compare + order builder
    =================================================================== */
 
-let alphaState = { tier: ALPHABET_TIERS[1].id, qty: 1, color: "#c15f3c" };
+let alphaState = { tier: ALPHABET_TIERS[1].id, qty: 1, color: "#7c2d3b" };
 
-const SWATCHES = ["#c15f3c", "#6f7d55", "#c99a3f", "#7c6a9c", "#3d7a8a", "#2b241c"];
+const SWATCHES = ["#7c2d3b", "#4a5940", "#a9834a", "#5c4468", "#2b5164", "#211d19"];
 
 function renderTierCompare() {
   const el = document.getElementById("tierCompare");

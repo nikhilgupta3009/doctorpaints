@@ -3,7 +3,7 @@
    No backend: compiles the brief into a WhatsApp / email message.
    =================================================================== */
 
-const STORY_SWATCHES = ["#c15f3c", "#6f7d55", "#c99a3f", "#7c6a9c", "#3d7a8a", "#b45a7a", "#2b241c", "#faf5ec"];
+const STORY_SWATCHES = ["#7c2d3b", "#4a5940", "#a9834a", "#5c4468", "#2b5164", "#86485a", "#211d19", "#f6f1e6"];
 let storySelectedColor = null;
 
 function renderStorySwatches() {
