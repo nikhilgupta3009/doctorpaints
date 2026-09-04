@@ -1,5 +1,5 @@
 /* ===================================================================
-   Doctor Paints — customized alphabets: tier compare + order builder
+   More by Shilpi — customized alphabets: tier compare + order builder
    =================================================================== */
 
 let alphaState = { tier: ALPHABET_TIERS[1].id, qty: 1, color: "#c15f3c" };

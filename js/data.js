@@ -1,14 +1,14 @@
 /* ===================================================================
-   Doctor Paints — shared data
+   More by Shilpi — shared data
    Edit prices, products and contact info here — every page reads
    from this single file so numbers stay consistent site-wide.
    =================================================================== */
 
 const BRAND = {
-  name: "Doctor Paints",
+  name: "More by Shilpi",
   whatsapp: "919999999999",   // TODO: replace with real WhatsApp number (country code + number, no +)
-  email: "hello@doctorpaints.in", // TODO: replace with real inbox
-  instagram: "https://instagram.com/doctorpaints",
+  email: "hello@morebyshilpi.in", // TODO: replace with real inbox
+  instagram: "https://instagram.com/morebyshilpi",
   address: "Ships pan-India · Local hand-delivery via Porter in select cities",
 };
 

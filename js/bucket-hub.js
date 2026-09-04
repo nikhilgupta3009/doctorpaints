@@ -1,5 +1,5 @@
 /* ===================================================================
-   Doctor Paints — Expressions / Inspiration hub pages
+   More by Shilpi — Expressions / Inspiration hub pages
    Renders the bucket intro + its two sub-sections from BUCKETS in data.js
    =================================================================== */
 

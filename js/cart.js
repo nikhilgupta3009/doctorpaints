@@ -1,5 +1,5 @@
 /* ===================================================================
-   Doctor Paints — cart (localStorage based, WhatsApp checkout)
+   More by Shilpi — cart (localStorage based, WhatsApp checkout)
    No payment gateway yet: the cart builds an itemised order summary
    and hands it to the buyer's WhatsApp to confirm & pay manually.
    =================================================================== */
@@ -110,7 +110,7 @@ function showToast(msg) {
 function checkoutOnWhatsApp() {
   const items = getCart();
   if (items.length === 0) return;
-  let msg = `Hi Doctor Paints! I'd like to order:\n\n`;
+  let msg = `Hi ${BRAND.name}! I'd like to order:\n\n`;
   items.forEach((i) => {
     msg += `• ${i.title}${i.meta ? " (" + i.meta + ")" : ""} x${i.qty} — ${money(i.price * i.qty)}\n`;
   });

@@ -1,5 +1,5 @@
 /* ===================================================================
-   Doctor Paints — motivation word art listing + configurator modal
+   More by Shilpi — motivation word art listing + configurator modal
    (mirrors js/prints.js, pricing driven by MOTIVATION_PRICING)
    =================================================================== */
 
@@ -27,7 +27,7 @@ function renderMotivationGrid() {
   ).join("");
 
   const waBtn = document.getElementById("motivationWaBtn");
-  if (waBtn) waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hi Doctor Paints! I'd like a custom word art piece — the word is: ")}`;
+  if (waBtn) waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'd like a custom word art piece — the word is: `)}`;
 }
 
 function priceForWord(format, size) {

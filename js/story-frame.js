@@ -1,5 +1,5 @@
 /* ===================================================================
-   Doctor Paints — "Your Story in a Frame" enquiry form
+   More by Shilpi — "Your Story in a Frame" enquiry form
    No backend: compiles the brief into a WhatsApp / email message.
    =================================================================== */
 
@@ -31,7 +31,7 @@ function buildStoryMessage() {
   const format = document.getElementById("sFormat").selectedOptions[0].textContent;
   const notes = document.getElementById("sNotes").value.trim();
 
-  let msg = `Hi Doctor Paints! I'd like to start a "Your Story in a Frame" piece.\n\n`;
+  let msg = `Hi ${BRAND.name}! I'd like to start a "Your Story in a Frame" piece.\n\n`;
   if (name) msg += `Name: ${name}\n`;
   if (contact) msg += `Contact: ${contact}\n`;
   msg += `Occasion: ${occasion}\n`;

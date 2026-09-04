@@ -1,5 +1,5 @@
 /* ===================================================================
-   Doctor Paints — prints listing + configurator modal
+   More by Shilpi — prints listing + configurator modal
    =================================================================== */
 
 let pmState = { print: null, format: "digital", size: "a4", qty: 1 };

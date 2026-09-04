@@ -1,5 +1,5 @@
 /* ===================================================================
-   Doctor Paints — shared header/footer + mobile nav + cart drawer wiring
+   More by Shilpi — shared header/footer + mobile nav + cart drawer wiring
    =================================================================== */
 
 // Flat entries mixed with dropdown groups (from BUCKETS). Order shown in nav.
@@ -54,7 +54,7 @@ function renderHeader() {
     <div class="banner">Handmade, made-to-order art · Ships across India · <a href="story-frame.html" style="text-decoration:underline;">Start a custom "Story in a Frame"</a></div>
     <header class="site-header">
       <div class="container header-row">
-        <a href="index.html" class="logo">Doctor Paints<span class="dot">.</span></a>
+        <a href="index.html" class="logo">${BRAND.name}<span class="dot">.</span></a>
         <nav class="nav-links">${desktopLinkHtml()}</nav>
         <div class="header-actions">
           <button class="cart-btn" onclick="openCart()">🛍 Cart <span class="cart-count" data-cart-count>0</span></button>
@@ -78,7 +78,7 @@ function renderFooter() {
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-logo">Doctor Paints.</div>
+            <div class="footer-logo">${BRAND.name}.</div>
             <p style="max-width:32ch;">Handmade prints and personalised wall art, painted one piece at a time.</p>
           </div>
           <div>
@@ -116,7 +116,7 @@ function renderFooter() {
           </div>
         </div>
         <div class="footer-bottom">
-          <span>© ${new Date().getFullYear()} Doctor Paints. All artwork handmade to order.</span>
+          <span>© ${new Date().getFullYear()} ${BRAND.name}. All artwork handmade to order.</span>
           <span>${BRAND.address}</span>
         </div>
       </div>
