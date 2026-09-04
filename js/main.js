@@ -6,7 +6,7 @@
 const NAV_LINKS = [
   { href: "index.html", label: "Home", key: "home" },
   { href: "expressions.html", label: "Expressions", key: "expressions", bucket: "expressions" },
-  { href: "inspirations.html", label: "Inspirations", key: "inspirations" },
+  { href: "inspirations.html", label: "Inspirations", key: "inspirations", bucket: "inspirations" },
 ];
 // Learn / About / Events are no longer top-nav items — still reachable via
 // the footer's "Visit" column (see renderFooter below) and their own URLs.

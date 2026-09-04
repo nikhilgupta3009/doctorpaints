@@ -10,10 +10,10 @@ Static site, no build step required (plain HTML/CSS/JS). Deployable to Cloudflar
 
 ```
 index.html               Home — full-bleed hero + Expressions & Inspirations preview grids
-expressions.html          One-of-a-kind ready paintings (Quick View + WhatsApp enquiry) +
-                            "Commission a Custom Original" section linking to alphabets/story-frame
+expressions.html          One-of-a-kind ready paintings (Quick View + WhatsApp enquiry)
 inspirations.html         Prints + Word Art grids, sharing one configurator modal
-                            (format + size + qty), plus the paper & size guide
+                            (format + size + qty), the paper & size guide, and a
+                            "Commission a Custom Original" section linking to alphabets/story-frame
 alphabets.html            Customized alphabets — Basic / Customized / Premium tiers
 story-frame.html          "Your Story in a Frame" — fully custom commission enquiry form
 learn.html                Short guides (sizing, care, printing, how commissions work)
@@ -30,7 +30,7 @@ js/inspirations.js            Prints/Word Art grid + shared configurator modal
 js/alphabets.js, story-frame.js   Page-specific logic for the two commission flows
 ```
 
-Top nav is flat: **Home · Expressions · Inspirations · Learn · About · Events** (Contact lives in the footer only).
+Top nav is flat: **Home · Expressions · Inspirations** (Learn, About, Events and Contact live in the footer only). Custom Alphabets and Your Story in a Frame are commissioned/personalised, so they're reached via Inspirations, not Expressions (which is ready-made originals only).
 
 ## Before going live — checklist
 
