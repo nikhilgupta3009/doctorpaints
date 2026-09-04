@@ -278,15 +278,14 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   aspect-ratio: 21/9;
   min-height: 320px;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--sage), var(--terracotta) 45%, var(--gold) 85%);
+  background-color: var(--ink);
+  background-size: cover;
+  background-position: center;
 }
 .hero-bleed::before {
   content: "";
   position: absolute; inset: 0;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(255,255,255,.25), transparent 38%),
-    radial-gradient(circle at 85% 30%, rgba(255,255,255,.18), transparent 42%),
-    radial-gradient(circle at 50% 90%, rgba(33,29,25,.35), transparent 55%);
+  background: rgba(20,16,13,.62);
 }
 .hero-bleed-copy {
   position: absolute;

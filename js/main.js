@@ -7,10 +7,9 @@ const NAV_LINKS = [
   { href: "index.html", label: "Home", key: "home" },
   { href: "expressions.html", label: "Expressions", key: "expressions", bucket: "expressions" },
   { href: "inspirations.html", label: "Inspirations", key: "inspirations" },
-  { href: "learn.html", label: "Learn", key: "learn" },
-  { href: "about.html", label: "About", key: "about" },
-  { href: "events.html", label: "Events", key: "events" },
 ];
+// Learn / About / Events are no longer top-nav items — still reachable via
+// the footer's "Visit" column (see renderFooter below) and their own URLs.
 
 const CART_ICON_SVG = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>`;
 
