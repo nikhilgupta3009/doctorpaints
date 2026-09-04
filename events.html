@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events — More by Shilpi</title>
+<meta name="description" content="Exhibitions, pop-ups and workshops from More by Shilpi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="events">
+
+<div id="site-header"></div>
+
+<section class="section section--tight">
+  <div class="container">
+    <span class="eyebrow">Events</span>
+    <h1>Exhibitions, pop-ups & workshops</h1>
+    <p class="lede" style="max-width:60ch;">Where to find the art in person, and where to learn to make some of your own.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div id="eventsList"></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("eventsList");
+    if (EVENTS_INFO.upcoming.length === 0) {
+      el.innerHTML = `
+        <div class="cat-card" style="padding:40px;text-align:center;max-width:560px;margin:0 auto;">
+          <div style="font-size:2rem;margin-bottom:12px;">🖼️</div>
+          <h3>Nothing on the calendar just yet</h3>
+          <p>${EVENTS_INFO.note}</p>
+          <a class="btn btn--wa" target="_blank" rel="noopener" href="https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hi " + BRAND.name + "! Let me know when your next event / workshop is announced.")}">Get Notified on WhatsApp</a>
+        </div>`;
+      return;
+    }
+    el.innerHTML = `<div class="grid grid--3">${EVENTS_INFO.upcoming
+      .map(
+        (e) => `
+      <div class="cat-card" style="padding:26px;">
+        <span class="pill">${e.date}</span>
+        <h3>${e.title}</h3>
+        <p>${e.location}</p>
+        <p>${e.description}</p>
+      </div>`
+      )
+      .join("")}</div>`;
+  });
+</script>
+</body>
+</html>

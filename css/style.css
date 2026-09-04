@@ -271,6 +271,45 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .trust-row .item { font-size: .85rem; color: var(--ink-soft); display: flex; gap: 8px; align-items: center; }
 .trust-row .item b { color: var(--ink); }
 
+/* ---------- Full-bleed hero (home page) ---------- */
+.hero-bleed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21/9;
+  min-height: 320px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--sage), var(--terracotta) 45%, var(--gold) 85%);
+}
+.hero-bleed::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,.25), transparent 38%),
+    radial-gradient(circle at 85% 30%, rgba(255,255,255,.18), transparent 42%),
+    radial-gradient(circle at 50% 90%, rgba(33,29,25,.35), transparent 55%);
+}
+.hero-bleed-copy {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 40px 24px;
+  text-align: center;
+  color: #fff;
+}
+.hero-bleed-copy .eyebrow { color: rgba(255,255,255,.85); }
+.hero-bleed-copy h1 { color: #fff; max-width: 24ch; margin: 0 auto .4em; }
+.hero-bleed-copy p { color: rgba(255,255,255,.88); max-width: 46ch; margin: 0 auto 20px; }
+
+/* ---------- Category section headings (Expressions / Inspirations) --- */
+.category-heading {
+  text-align: center;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 28px;
+}
+
 /* ---------- Category / Product cards ---------- */
 .grid {
   display: grid;
@@ -291,6 +330,46 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   flex-direction: column;
 }
 .cat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-pop); }
+
+/* Product card badges + hover Quick View, used on Expressions & Inspirations */
+.pcard { position: relative; }
+.pcard .art-block { position: relative; font-size: 1.7rem; line-height: 1.15; }
+.badge-new, .badge-sold {
+  position: absolute;
+  top: 12px;
+  z-index: 2;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.badge-new { left: 12px; background: var(--ink); color: #fff; }
+.badge-sold { right: 12px; background: rgba(255,255,255,.92); color: var(--ink); border: 1px solid var(--line); }
+.quick-view-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16px;
+  background: rgba(33,29,25,0);
+  opacity: 0;
+  transition: opacity .2s ease, background .2s ease;
+  z-index: 1;
+}
+.pcard:hover .quick-view-layer { opacity: 1; background: rgba(33,29,25,.18); }
+.quick-view-pill {
+  background: #fff;
+  color: var(--ink);
+  font-size: .78rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-card);
+}
+.pcard .cat-body .price-line .sold-label { color: var(--ink-soft); font-weight: 600; }
 
 .art-block {
   aspect-ratio: 4/3;
@@ -342,35 +421,6 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   width: fit-content;
 }
 .pill--gold { background: rgba(201,154,63,.18); color: var(--terracotta-dark); }
-
-/* ---------- Home bucket showcase (Expressions / Inspiration) ---------- */
-.bucket-card {
-  background: var(--paper);
-  border-radius: var(--radius-l);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-}
-.bucket-card .art-block { aspect-ratio: 16/9; font-size: 1.6rem; }
-.bucket-body { padding: 26px 26px 28px; }
-.bucket-body p { font-size: .92rem; }
-.bucket-sub-list { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 20px; }
-.bucket-sub-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--cream);
-  font-weight: 600;
-  font-size: .88rem;
-}
-.bucket-sub-item span.from { font-weight: 700; color: var(--terracotta-dark); font-size: .82rem; }
-.bucket-sub-item:hover { border-color: var(--terracotta); }
 
 /* ---------- Product detail layout ---------- */
 .product-layout {

@@ -134,56 +134,99 @@ const MOTIVATION_PRICING = {
 // ---- Porter / delivery note for physical (printed or framed) items --
 const PORTER_NOTE = "Printed and framed pieces are packed flat and hand-delivered by Porter for safe handling in Delhi NCR, Mumbai, Bengaluru, Pune, Hyderabad & Chennai. Porter's fare depends on your exact pickup-to-drop distance, so we confirm the final delivery charge on WhatsApp before you pay — usually ₹80–₹250 within city limits. Outside these cities, we ship via a tracked courier at a flat ₹149.";
 
-// ---- The two shop buckets: Expressions (artist-led) & Inspiration (person-led) --
-const BUCKETS = [
+// ---- Expressions: one-of-a-kind ready paintings (not reproductions) --
+const ORIGINAL_ART = [
   {
-    key: "expressions",
-    label: "Expressions",
-    href: "expressions.html",
+    id: "monsoon-hush",
+    title: "Monsoon Hush",
     art: "art--1",
-    eyebrow: "Artist-led",
-    tagline: "Born from the artist's own imagination.",
-    blurb: "Ready-made pieces where we chose the subject, the palette, the mood — pick the one that speaks to you.",
-    children: [
-      {
-        href: "prints.html",
-        label: "Downloadable & Framed Prints",
-        art: "art--1",
-        blurb: "Hand-painted designs in two sizes, as an instant download or a printed / framed copy.",
-        priceFrom: 299,
-      },
-      {
-        href: "motivation.html",
-        label: "Motivation Word Art",
-        art: "art--2",
-        blurb: "Bold hand-lettered words — RISE, INSPIRE, GROW — for the wall that keeps you going.",
-        priceFrom: 349,
-      },
-    ],
+    medium: "Acrylic on canvas, 24 × 30 in",
+    price: 42000,
+    status: "available", // "available" | "sold"
+    isNew: true,
   },
   {
-    key: "inspiration",
-    label: "Inspiration",
-    href: "inspiration.html",
+    id: "where-the-light-settles",
+    title: "Where the Light Settles",
+    art: "art--5",
+    medium: "Mixed media on canvas, 20 × 24 in",
+    price: 28000,
+    status: "available",
+    isNew: true,
+  },
+  {
+    id: "unfinished-sentences",
+    title: "Unfinished Sentences",
     art: "art--4",
-    eyebrow: "Person-led",
-    tagline: "Built entirely around you.",
-    blurb: "Every element — colours, motifs, memories — is chosen from what the person it's for actually loves.",
-    children: [
-      {
-        href: "alphabets.html",
-        label: "Custom Alphabets",
-        art: "art--3",
-        blurb: "Hand-lettered initials personalised with your colours, motifs and story — Basic, Customized or Premium.",
-        priceFrom: 349,
-      },
-      {
-        href: "story-frame.html",
-        label: "Your Story in a Frame",
-        art: "art--4",
-        blurb: "Tell us who and what you love — we illustrate it into one fully custom keepsake.",
-        priceFrom: 1999,
-      },
-    ],
+    medium: "Ink & acrylic on canvas, 18 × 24 in",
+    price: 0,
+    status: "sold",
+    isNew: true,
+  },
+  {
+    id: "quiet-company",
+    title: "Quiet Company",
+    art: "art--2",
+    medium: "Acrylic on canvas, 16 × 20 in",
+    price: 18000,
+    status: "available",
+    isNew: false,
+  },
+  {
+    id: "between-two-seasons",
+    title: "Between Two Seasons",
+    art: "art--3",
+    medium: "Acrylic on canvas, 20 × 20 in",
+    price: 22000,
+    status: "available",
+    isNew: true,
+  },
+  {
+    id: "soft-landing",
+    title: "Soft Landing",
+    art: "art--6",
+    medium: "Mixed media on canvas, 24 × 24 in",
+    price: 0,
+    status: "sold",
+    isNew: false,
   },
 ];
+
+// ---- Learn: short original guides (paper care, sizing, commissioning) --
+const LEARN_ARTICLES = [
+  {
+    id: "choosing-a-size",
+    title: "Choosing the Right Size for Your Wall",
+    art: "art--5",
+    minutes: 3,
+    summary: "A quick way to figure out A4 vs A3 vs a full original canvas before you order — measure the wall, not the art.",
+  },
+  {
+    id: "caring-for-originals",
+    title: "Caring for Your Original Painting",
+    art: "art--2",
+    minutes: 4,
+    summary: "Keep an original canvas or paper piece looking its best — light, humidity, cleaning and hanging basics.",
+  },
+  {
+    id: "paper-and-printing",
+    title: "Our Paper & Printing Guide",
+    art: "art--1",
+    minutes: 3,
+    summary: "GSM, matte vs cold-press, and what to ask for at a local print lab if you're printing a download yourself.",
+    href: "inspirations.html#paper-guide",
+  },
+  {
+    id: "what-makes-it-custom",
+    title: "What Makes a Piece \"Custom\"?",
+    art: "art--3",
+    minutes: 3,
+    summary: "The difference between a ready original, a personalised alphabet and a fully bespoke Story in a Frame — and how to pick.",
+  },
+];
+
+// ---- Events: exhibitions, pop-ups & workshops -----------------------
+const EVENTS_INFO = {
+  upcoming: [], // add {title, date, location, description} objects here as events are scheduled
+  note: "Nothing on the calendar right now — follow along on Instagram or WhatsApp and we'll share the next exhibition, pop-up or workshop as soon as it's confirmed.",
+};

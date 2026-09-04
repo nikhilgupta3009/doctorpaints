@@ -59,7 +59,7 @@ function renderCart() {
 
   const items = getCart();
   if (items.length === 0) {
-    list.innerHTML = `<div class="cart-empty">Your cart is empty.<br>Browse our <a href="prints.html" style="color:var(--terracotta);font-weight:600;">prints</a> or <a href="alphabets.html" style="color:var(--terracotta);font-weight:600;">custom alphabets</a> to get started.</div>`;
+    list.innerHTML = `<div class="cart-empty">Your cart is empty.<br>Browse our <a href="inspirations.html" style="color:var(--terracotta);font-weight:600;">inspirations</a> or <a href="alphabets.html" style="color:var(--terracotta);font-weight:600;">custom alphabets</a> to get started.</div>`;
     if (foot) foot.style.display = "none";
     return;
   }

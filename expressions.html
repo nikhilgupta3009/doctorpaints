@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expressions — Artist-Led Art — More by Shilpi</title>
-<meta name="description" content="Expressions: ready-made hand-painted prints and word art, born purely from the artist's own imagination.">
+<title>Expressions — One-of-a-Kind Paintings — More by Shilpi</title>
+<meta name="description" content="Ready, one-of-a-kind original paintings — plus commission a fully custom original alphabet or Story in a Frame piece.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -13,46 +13,73 @@
 
 <div id="site-header"></div>
 
-<section class="hero" style="padding-bottom:20px;">
-  <div class="container" style="display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;">
-    <div>
-      <span class="eyebrow" id="bucketEyebrow">Artist-led</span>
-      <h1 id="bucketTitle">Born from the artist's own imagination.</h1>
-      <p class="lede" id="bucketBlurb">Ready-made pieces where we chose the subject, the palette, the mood.</p>
-      <div class="hero-ctas">
-        <a href="prints.html" class="btn btn--primary">Browse Prints</a>
-        <a href="motivation.html" class="btn btn--outline">Browse Word Art</a>
-      </div>
-      <p style="margin-top:20px;"><a href="#" id="bucketOtherLink" style="color:var(--terracotta);font-weight:600;"></a></p>
-    </div>
-    <div class="hero-art art--1" id="bucketHeroArt">
-      <span>Painted first, digitised second</span>
-      <div class="tag">✎ 100% hand-painted</div>
-    </div>
+<section class="section section--tight">
+  <div class="container">
+    <span class="eyebrow">Expressions</span>
+    <h1>One-of-a-kind paintings, ready to hang</h1>
+    <p class="lede" style="max-width:60ch;">Each piece below exists only once — when it's gone, it's gone. Prefer something made just for you? Scroll down to commission a fully custom original instead.</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section--tight">
   <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow">Shop Expressions</span>
-      <h2>Two ways to bring our art home</h2>
-    </div>
-    <div class="grid grid--2" id="bucketChildren"></div>
+    <div class="grid grid--4" id="originalArtGrid"></div>
   </div>
 </section>
 
 <section class="section section--alt">
   <div class="container">
-    <p class="divider-quote">"Expressions is the art we made because we couldn't not make it — pick the piece that already feels like yours."</p>
+    <div class="section-head center">
+      <span class="eyebrow">Or start from scratch</span>
+      <h2>Commission a Custom Original</h2>
+      <p>Two ways to get a one-of-a-kind piece built entirely around you — your name, your story, your people.</p>
+    </div>
+    <div class="grid grid--2">
+      <a href="alphabets.html" class="cat-card">
+        <div class="art-block art--3"><span>Custom Alphabets</span></div>
+        <div class="cat-body">
+          <span class="pill pill--gold">Basic · Customized · Premium</span>
+          <h3>Custom Alphabets</h3>
+          <p>Hand-lettered initials personalised with your colours, motifs and story.</p>
+          <div class="price-line"><span class="price-from">From</span><span>₹349</span></div>
+        </div>
+      </a>
+      <a href="story-frame.html" class="cat-card">
+        <div class="art-block art--4"><span>Your Story in a Frame</span></div>
+        <div class="cat-body">
+          <span class="pill pill--gold">Fully custom</span>
+          <h3>Your Story in a Frame</h3>
+          <p>Tell us who and what you love — we illustrate it into one keepsake.</p>
+          <div class="price-line"><span class="price-from">Starting</span><span>₹1,999</span></div>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
+
+<!-- Quick View modal -->
+<div class="cart-overlay" id="oaOverlay" onclick="closeOaModal()"></div>
+<div class="cart-drawer" id="oaModal" style="width:440px;">
+  <div class="cart-head">
+    <h3 style="margin:0;" id="oaTitle">Piece</h3>
+    <button class="cart-close" onclick="closeOaModal()">✕</button>
+  </div>
+  <div style="padding:20px 24px;overflow-y:auto;flex:1;">
+    <div class="art-block" id="oaArt" style="border-radius:14px;margin-bottom:16px;"><span id="oaArtLabel"></span></div>
+    <p id="oaMedium" style="font-size:.9rem;color:var(--ink-soft);"></p>
+    <div class="price-tag" id="oaPrice">₹0</div>
+    <div class="note-box">This is a one-of-a-kind original — only one exists. We'll confirm availability and shipping/Porter delivery on WhatsApp.</div>
+  </div>
+  <div class="cart-foot" style="display:block;">
+    <button class="btn btn--wa btn--block" id="oaWaBtn" target="_blank" rel="noopener">Enquire on WhatsApp</button>
+  </div>
+</div>
 
 <div id="site-footer"></div>
 
 <script src="js/data.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/main.js"></script>
-<script src="js/bucket-hub.js"></script>
+<script src="js/expressions.js"></script>
 </body>
 </html>

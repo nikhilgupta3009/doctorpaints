@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>More by Shilpi — Handmade Prints & Personalised Art</title>
-<meta name="description" content="Downloadable art prints, custom hand-lettered alphabets, motivational word art and personalised 'Story in a Frame' pieces — handmade to order.">
+<title>More by Shilpi — Expressions, Inspirations & Personalised Pieces</title>
+<meta name="description" content="One-of-a-kind original paintings, fine art prints and fully personalised commissions — handmade to order.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -13,47 +13,48 @@
 
 <div id="site-header"></div>
 
-<section class="hero">
-  <div class="container" style="display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;">
-    <div>
-      <span class="eyebrow">Handmade · Made to order</span>
-      <h1>Art that starts with your story.</h1>
-      <p class="lede">From ready-to-download prints to a fully personalised piece built around what you love — every piece from More by Shilpi is painted, lettered or designed by hand.</p>
-      <div class="hero-ctas">
-        <a href="story-frame.html" class="btn btn--primary">Start Your Story in a Frame</a>
-        <a href="prints.html" class="btn btn--outline">Browse Prints</a>
-      </div>
-      <div class="trust-row">
-        <div class="item">🎨 <b>100% hand-painted</b> or hand-lettered originals</div>
-        <div class="item">📩 <b>Instant download</b> on digital prints</div>
-        <div class="item">🚚 <b>Porter delivery</b> for framed pieces in-city</div>
-      </div>
-    </div>
-    <div class="hero-art art--1">
-      <span>Original watercolour, painted to order</span>
-      <div class="tag">✎ Hand-painted by More by Shilpi</div>
+<section class="hero-bleed art--1">
+  <div class="hero-bleed-copy">
+    <span class="eyebrow">Handmade · Made to order</span>
+    <h1>Art that starts with your story.</h1>
+    <p>One-of-a-kind originals, fine art prints, and pieces built entirely around what you love.</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="expressions.html" class="btn btn--primary">Shop Expressions</a>
+      <a href="inspirations.html" class="btn btn--outline" style="background:rgba(255,255,255,.92);">Shop Inspirations</a>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow">Shop by bucket</span>
-      <h2>Two ways to bring handmade art home</h2>
-      <p>Everything we make falls into one of two buckets — art we imagined, or art built entirely around you.</p>
+    <p class="category-heading">Expressions</p>
+    <div class="grid grid--4" id="homeOriginalArt"></div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="expressions.html" class="btn btn--outline">View All Expressions</a>
     </div>
-    <div class="grid grid--2" id="homeBuckets"></div>
   </div>
 </section>
 
 <section class="section section--alt">
   <div class="container">
-    <p class="divider-quote">"Send us your favourite things — your dog, your city, that one holiday — and we'll paint them into a wall you'll never stop looking at."</p>
+    <p class="category-heading">Inspirations</p>
+    <div class="grid grid--4" id="homeFineArtPrints"></div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="inspirations.html" class="btn btn--outline">View All Inspirations</a>
+    </div>
   </div>
 </section>
 
 <section class="section">
+  <div class="container">
+    <p class="divider-quote">"Send us your favourite things — your dog, your city, that one holiday — and we'll paint them into a wall you'll never stop looking at."</p>
+    <div style="text-align:center;margin-top:12px;">
+      <a href="story-frame.html" class="btn btn--primary">Start Your Story in a Frame</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
   <div class="container">
     <div class="section-head center">
       <span class="eyebrow">How it works</span>
@@ -63,7 +64,7 @@
       <div class="step">
         <div class="num">1</div>
         <h3>Choose</h3>
-        <p>Pick a ready design, a letter tier, or start a fully custom story piece.</p>
+        <p>A ready original, a fine art print, or a fully custom story piece.</p>
       </div>
       <div class="step">
         <div class="num">2</div>
@@ -78,7 +79,7 @@
       <div class="step">
         <div class="num">4</div>
         <h3>Receive</h3>
-        <p>Instant download, or a printed / framed piece delivered via Porter or courier.</p>
+        <p>Instant download, or a piece delivered via Porter or courier.</p>
       </div>
     </div>
   </div>
@@ -91,26 +92,37 @@
 <script src="js/main.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("homeBuckets").innerHTML = BUCKETS.map(
-      (b) => `
-      <a href="${b.href}" class="bucket-card">
-        <div class="art-block ${b.art}"><span>${b.label}</span></div>
-        <div class="bucket-body">
-          <span class="pill ${b.key === "inspiration" ? "pill--gold" : ""}">${b.eyebrow}</span>
-          <h3>${b.label}</h3>
-          <p>${b.blurb}</p>
-          <div class="bucket-sub-list">
-            ${b.children
-              .map(
-                (c) =>
-                  `<span class="bucket-sub-item">${c.label}<span class="from">From ${money(c.priceFrom)}</span></span>`
-              )
-              .join("")}
-          </div>
-          <span class="btn btn--outline btn--block">Shop ${b.label}</span>
+    document.getElementById("homeOriginalArt").innerHTML = ORIGINAL_ART.slice(0, 4)
+      .map(
+        (p) => `
+      <a href="expressions.html" class="cat-card pcard">
+        ${p.isNew ? '<span class="badge-new">New</span>' : ""}
+        ${p.status === "sold" ? '<span class="badge-sold">Sold</span>' : ""}
+        <div class="art-block ${p.art}"><span>${p.title}</span></div>
+        <div class="quick-view-layer"><span class="quick-view-pill">Quick View</span></div>
+        <div class="cat-body">
+          <h3>${p.title}</h3>
+          <p style="font-size:.85rem;">${p.medium}</p>
+          <div class="price-line">${p.status === "sold" ? '<span class="sold-label">Sold</span>' : `<span></span><span>${money(p.price)}</span>`}</div>
         </div>
       </a>`
-    ).join("");
+      )
+      .join("");
+
+    document.getElementById("homeFineArtPrints").innerHTML = PRINTS.slice(0, 4)
+      .map(
+        (p) => `
+      <a href="inspirations.html" class="cat-card pcard">
+        <span class="badge-new">New</span>
+        <div class="art-block ${p.art}"><span>${p.title}</span></div>
+        <div class="quick-view-layer"><span class="quick-view-pill">Quick View</span></div>
+        <div class="cat-body">
+          <h3>${p.title}</h3>
+          <div class="price-line"><span class="price-from">From</span><span>${money(p.priceDigital.a4)}</span></div>
+        </div>
+      </a>`
+      )
+      .join("");
   });
 </script>
 </body>

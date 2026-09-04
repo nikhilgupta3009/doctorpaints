@@ -2,14 +2,14 @@
    More by Shilpi — shared header/footer + mobile nav + cart drawer wiring
    =================================================================== */
 
-// Simple flat nav — bucket pages (Expressions/Inspiration) link straight to
-// their hub, which in turn links to the two sub-pages. No dropdown menus.
+// Flat top-level nav. Contact stays footer-only, matching the reference layout.
 const NAV_LINKS = [
   { href: "index.html", label: "Home", key: "home" },
   { href: "expressions.html", label: "Expressions", key: "expressions", bucket: "expressions" },
-  { href: "inspiration.html", label: "Inspiration", key: "inspiration", bucket: "inspiration" },
+  { href: "inspirations.html", label: "Inspirations", key: "inspirations" },
+  { href: "learn.html", label: "Learn", key: "learn" },
   { href: "about.html", label: "About", key: "about" },
-  { href: "contact.html", label: "Contact", key: "contact" },
+  { href: "events.html", label: "Events", key: "events" },
 ];
 
 const CART_ICON_SVG = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>`;
@@ -64,27 +64,27 @@ function renderFooter() {
             <p style="max-width:32ch;">Handmade prints and personalised wall art, painted one piece at a time.</p>
           </div>
           <div>
-            <h4>Expressions</h4>
+            <h4>Shop</h4>
             <ul>
-              <li><a href="expressions.html">All Expressions</a></li>
-              <li><a href="prints.html">Downloadable & Framed Prints</a></li>
-              <li><a href="motivation.html">Motivation Word Art</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Inspiration</h4>
-            <ul>
-              <li><a href="inspiration.html">All Inspiration</a></li>
+              <li><a href="expressions.html">Expressions</a></li>
+              <li><a href="inspirations.html">Inspirations</a></li>
               <li><a href="alphabets.html">Custom Alphabets</a></li>
               <li><a href="story-frame.html">Your Story in a Frame</a></li>
             </ul>
           </div>
           <div>
-            <h4>Info</h4>
+            <h4>Visit</h4>
             <ul>
+              <li><a href="learn.html">Learn</a></li>
+              <li><a href="events.html">Events</a></li>
               <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
               <li><a href="contact.html">Contact</a></li>
-              <li><a href="prints.html#paper-guide">Paper &amp; Size Guide</a></li>
+              <li><a href="inspirations.html#paper-guide">Paper &amp; Size Guide</a></li>
               <li><a href="contact.html#faq">Shipping &amp; Porter Delivery</a></li>
             </ul>
           </div>
