@@ -133,3 +133,57 @@ const MOTIVATION_PRICING = {
 
 // ---- Porter / delivery note for physical (printed or framed) items --
 const PORTER_NOTE = "Printed and framed pieces are packed flat and hand-delivered by Porter for safe handling in Delhi NCR, Mumbai, Bengaluru, Pune, Hyderabad & Chennai. Porter's fare depends on your exact pickup-to-drop distance, so we confirm the final delivery charge on WhatsApp before you pay — usually ₹80–₹250 within city limits. Outside these cities, we ship via a tracked courier at a flat ₹149.";
+
+// ---- The two shop buckets: Expressions (artist-led) & Inspiration (person-led) --
+const BUCKETS = [
+  {
+    key: "expressions",
+    label: "Expressions",
+    href: "expressions.html",
+    art: "art--1",
+    eyebrow: "Artist-led",
+    tagline: "Born from the artist's own imagination.",
+    blurb: "Ready-made pieces where we chose the subject, the palette, the mood — pick the one that speaks to you.",
+    children: [
+      {
+        href: "prints.html",
+        label: "Downloadable & Framed Prints",
+        art: "art--1",
+        blurb: "Hand-painted designs in two sizes, as an instant download or a printed / framed copy.",
+        priceFrom: 299,
+      },
+      {
+        href: "motivation.html",
+        label: "Motivation Word Art",
+        art: "art--2",
+        blurb: "Bold hand-lettered words — RISE, INSPIRE, GROW — for the wall that keeps you going.",
+        priceFrom: 349,
+      },
+    ],
+  },
+  {
+    key: "inspiration",
+    label: "Inspiration",
+    href: "inspiration.html",
+    art: "art--4",
+    eyebrow: "Person-led",
+    tagline: "Built entirely around you.",
+    blurb: "Every element — colours, motifs, memories — is chosen from what the person it's for actually loves.",
+    children: [
+      {
+        href: "alphabets.html",
+        label: "Custom Alphabets",
+        art: "art--3",
+        blurb: "Hand-lettered initials personalised with your colours, motifs and story — Basic, Customized or Premium.",
+        priceFrom: 349,
+      },
+      {
+        href: "story-frame.html",
+        label: "Your Story in a Frame",
+        art: "art--4",
+        blurb: "Tell us who and what you love — we illustrate it into one fully custom keepsake.",
+        priceFrom: 1999,
+      },
+    ],
+  },
+];

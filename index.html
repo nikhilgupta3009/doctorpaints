@@ -39,47 +39,11 @@
 <section class="section">
   <div class="container">
     <div class="section-head center">
-      <span class="eyebrow">Shop by category</span>
-      <h2>Four ways to bring handmade art home</h2>
+      <span class="eyebrow">Shop by bucket</span>
+      <h2>Two ways to bring handmade art home</h2>
+      <p>Everything we make falls into one of two buckets — art we imagined, or art built entirely around you.</p>
     </div>
-    <div class="grid grid--4">
-      <a href="prints.html" class="cat-card">
-        <div class="art-block art--1"><span>Downloadable Prints</span></div>
-        <div class="cat-body">
-          <span class="pill">Instant download</span>
-          <h3>Prints</h3>
-          <p>Ready-made designs in two sizes, or add a printed / framed copy.</p>
-          <div class="price-line"><span class="price-from">From</span><span>₹299</span></div>
-        </div>
-      </a>
-      <a href="alphabets.html" class="cat-card">
-        <div class="art-block art--3"><span>Customized Alphabets</span></div>
-        <div class="cat-body">
-          <span class="pill pill--gold">Basic · Customized · Premium</span>
-          <h3>Custom Alphabets</h3>
-          <p>Hand-lettered initials, personalised with your story, in three tiers.</p>
-          <div class="price-line"><span class="price-from">From</span><span>₹349</span></div>
-        </div>
-      </a>
-      <a href="motivation.html" class="cat-card">
-        <div class="art-block art--2"><span>RISE · INSPIRE · GROW</span></div>
-        <div class="cat-body">
-          <span class="pill">Word art</span>
-          <h3>Motivation</h3>
-          <p>Bold hand-lettered words for the wall that keeps you going.</p>
-          <div class="price-line"><span class="price-from">From</span><span>₹349</span></div>
-        </div>
-      </a>
-      <a href="story-frame.html" class="cat-card">
-        <div class="art-block art--4"><span>Your Story, Illustrated</span></div>
-        <div class="cat-body">
-          <span class="pill pill--gold">Fully custom</span>
-          <h3>Your Story in a Frame</h3>
-          <p>Tell us what you love — we turn it into one illustrated keepsake.</p>
-          <div class="price-line"><span class="price-from">Starting</span><span>₹1,999</span></div>
-        </div>
-      </a>
-    </div>
+    <div class="grid grid--2" id="homeBuckets"></div>
   </div>
 </section>
 
@@ -125,5 +89,29 @@
 <script src="js/data.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("homeBuckets").innerHTML = BUCKETS.map(
+      (b) => `
+      <a href="${b.href}" class="bucket-card">
+        <div class="art-block ${b.art}"><span>${b.label}</span></div>
+        <div class="bucket-body">
+          <span class="pill ${b.key === "inspiration" ? "pill--gold" : ""}">${b.eyebrow}</span>
+          <h3>${b.label}</h3>
+          <p>${b.blurb}</p>
+          <div class="bucket-sub-list">
+            ${b.children
+              .map(
+                (c) =>
+                  `<span class="bucket-sub-item">${c.label}<span class="from">From ${money(c.priceFrom)}</span></span>`
+              )
+              .join("")}
+          </div>
+          <span class="btn btn--outline btn--block">Shop ${b.label}</span>
+        </div>
+      </a>`
+    ).join("");
+  });
+</script>
 </body>
 </html>

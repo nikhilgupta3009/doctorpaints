@@ -2,11 +2,10 @@
    Doctor Paints — shared header/footer + mobile nav + cart drawer wiring
    =================================================================== */
 
+// Flat entries mixed with dropdown groups (from BUCKETS). Order shown in nav.
 const NAV_LINKS = [
-  { href: "prints.html", label: "Prints", key: "prints" },
-  { href: "alphabets.html", label: "Custom Alphabets", key: "alphabets" },
-  { href: "motivation.html", label: "Motivation", key: "motivation" },
-  { href: "story-frame.html", label: "Your Story in a Frame", key: "story" },
+  { href: "expressions.html", label: "Expressions", key: "expressions", group: BUCKETS[0] },
+  { href: "inspiration.html", label: "Inspiration", key: "inspiration", group: BUCKETS[1] },
   { href: "about.html", label: "About", key: "about" },
   { href: "contact.html", label: "Contact", key: "contact" },
 ];
@@ -15,25 +14,54 @@ function renderHeader() {
   const mount = document.getElementById("site-header");
   if (!mount) return;
   const active = document.body.dataset.page;
+  const activeBucket = document.body.dataset.bucket;
 
-  const linkHtml = (extraClass) =>
-    NAV_LINKS.map(
-      (l) =>
-        `<a href="${l.href}" class="${extraClass || ""} ${active === l.key ? "active" : ""}">${l.label}</a>`
-    ).join("");
+  const isActive = (l) => active === l.key || (l.group && activeBucket === l.group.key);
+
+  const desktopLinkHtml = () =>
+    NAV_LINKS.map((l) => {
+      if (!l.group) {
+        return `<a href="${l.href}" class="${isActive(l) ? "active" : ""}">${l.label}</a>`;
+      }
+      const children = l.group.children
+        .map(
+          (c) =>
+            `<a href="${c.href}"><span>${c.label}</span><small>${c.blurb}</small></a>`
+        )
+        .join("");
+      return `
+        <div class="nav-item">
+          <a href="${l.href}" class="nav-dropdown-trigger ${isActive(l) ? "active" : ""}">${l.label} <span class="caret">▾</span></a>
+          <div class="nav-dropdown-panel">
+            <a href="${l.href}" class="nav-dropdown-all">All of ${l.label} →</a>
+            ${children}
+          </div>
+        </div>`;
+    }).join("");
+
+  const mobileLinkHtml = () =>
+    NAV_LINKS.map((l) => {
+      if (!l.group) {
+        return `<a href="${l.href}" class="${isActive(l) ? "active" : ""}">${l.label}</a>`;
+      }
+      const children = l.group.children
+        .map((c) => `<a href="${c.href}" class="mobile-sub-link">${c.label}</a>`)
+        .join("");
+      return `<a href="${l.href}" class="${isActive(l) ? "active" : ""}">${l.label}</a>${children}`;
+    }).join("");
 
   mount.innerHTML = `
     <div class="banner">Handmade, made-to-order art · Ships across India · <a href="story-frame.html" style="text-decoration:underline;">Start a custom "Story in a Frame"</a></div>
     <header class="site-header">
       <div class="container header-row">
         <a href="index.html" class="logo">Doctor Paints<span class="dot">.</span></a>
-        <nav class="nav-links">${linkHtml()}</nav>
+        <nav class="nav-links">${desktopLinkHtml()}</nav>
         <div class="header-actions">
           <button class="cart-btn" onclick="openCart()">🛍 Cart <span class="cart-count" data-cart-count>0</span></button>
           <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
         </div>
       </div>
-      <div class="mobile-menu" id="mobileMenu">${linkHtml()}</div>
+      <div class="mobile-menu" id="mobileMenu">${mobileLinkHtml()}</div>
     </header>
   `;
 
@@ -54,11 +82,18 @@ function renderFooter() {
             <p style="max-width:32ch;">Handmade prints and personalised wall art, painted one piece at a time.</p>
           </div>
           <div>
-            <h4>Shop</h4>
+            <h4>Expressions</h4>
             <ul>
-              <li><a href="prints.html">Downloadable Prints</a></li>
+              <li><a href="expressions.html">All Expressions</a></li>
+              <li><a href="prints.html">Downloadable & Framed Prints</a></li>
+              <li><a href="motivation.html">Motivation Word Art</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Inspiration</h4>
+            <ul>
+              <li><a href="inspiration.html">All Inspiration</a></li>
               <li><a href="alphabets.html">Custom Alphabets</a></li>
-              <li><a href="motivation.html">Motivation Words</a></li>
               <li><a href="story-frame.html">Your Story in a Frame</a></li>
             </ul>
           </div>

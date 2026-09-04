@@ -174,6 +174,67 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   background: var(--terracotta);
 }
 
+/* Dropdown nav groups (Expressions / Inspiration) */
+.nav-item { position: relative; display: flex; align-items: center; }
+.nav-dropdown-trigger { display: inline-flex; align-items: center; gap: 4px; }
+.nav-dropdown-trigger .caret { font-size: .7em; opacity: .6; }
+.nav-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-pop);
+  padding: 10px;
+  min-width: 280px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease;
+  z-index: 50;
+}
+.nav-item:hover .nav-dropdown-panel,
+.nav-item:focus-within .nav-dropdown-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown-panel a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.nav-dropdown-panel a:hover { background: var(--cream-deep); }
+.nav-dropdown-panel a small {
+  display: block;
+  font-weight: 400;
+  color: var(--ink-soft);
+  font-size: .76rem;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+.nav-dropdown-panel a.nav-dropdown-all {
+  color: var(--terracotta-dark);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.mobile-sub-link {
+  padding-left: 18px !important;
+  font-weight: 500 !important;
+  font-size: .9rem;
+  color: var(--ink-soft) !important;
+}
+
 .header-actions { display: flex; align-items: center; gap: 14px; }
 
 .cart-btn {
@@ -331,6 +392,35 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   width: fit-content;
 }
 .pill--gold { background: rgba(201,154,63,.18); color: var(--terracotta-dark); }
+
+/* ---------- Home bucket showcase (Expressions / Inspiration) ---------- */
+.bucket-card {
+  background: var(--paper);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.bucket-card .art-block { aspect-ratio: 16/9; font-size: 1.6rem; }
+.bucket-body { padding: 26px 26px 28px; }
+.bucket-body p { font-size: .92rem; }
+.bucket-sub-list { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 20px; }
+.bucket-sub-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--cream);
+  font-weight: 600;
+  font-size: .88rem;
+}
+.bucket-sub-item span.from { font-weight: 700; color: var(--terracotta-dark); font-size: .82rem; }
+.bucket-sub-item:hover { border-color: var(--terracotta); }
 
 /* ---------- Product detail layout ---------- */
 .product-layout {
@@ -580,7 +670,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
   gap: 32px;
   margin-bottom: 40px;
 }
@@ -643,7 +733,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
   .product-layout { grid-template-columns: 1fr; gap: 32px; }
   .buy-box { position: static; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .tier-compare { grid-template-columns: 1fr; }
   .paper-guide { grid-template-columns: 1fr; }
