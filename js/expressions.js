@@ -11,7 +11,7 @@ function renderOriginalArtGrid() {
     <div class="cat-card pcard" onclick="openOaModal('${p.id}')" style="cursor:pointer;">
       ${p.isNew ? '<span class="badge-new">New</span>' : ""}
       ${p.status === "sold" ? '<span class="badge-sold">Sold</span>' : ""}
-      <div class="art-block ${p.art}"><span>${p.title}</span></div>
+      <div class="art-block ${p.art} ${p.image ? "has-img" : ""}">${p.image ? `<img src="${p.image}" alt="${p.title}" loading="lazy">` : `<span>${p.title}</span>`}</div>
       <div class="quick-view-layer"><span class="quick-view-pill">Quick View</span></div>
       <div class="cat-body">
         <h3>${p.title}</h3>
@@ -26,8 +26,11 @@ function openOaModal(id) {
   const p = ORIGINAL_ART.find((x) => x.id === id);
   if (!p) return;
   document.getElementById("oaTitle").textContent = p.title;
-  document.getElementById("oaArt").className = `art-block ${p.art}`;
-  document.getElementById("oaArtLabel").textContent = p.title;
+  const oaArt = document.getElementById("oaArt");
+  oaArt.className = `art-block ${p.art} ${p.image ? "has-img" : ""}`;
+  oaArt.innerHTML = p.image
+    ? `<img src="${p.image}" alt="${p.title}">`
+    : `<span id="oaArtLabel">${p.title}</span>`;
   document.getElementById("oaMedium").textContent = p.medium;
   document.getElementById("oaPrice").textContent = p.status === "sold" ? "Sold" : money(p.price);
 
