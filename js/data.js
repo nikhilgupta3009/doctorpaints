@@ -131,6 +131,14 @@ const MOTIVATION_PRICING = {
   priceFramed: { a4: 1349, a3: 1849 },
 };
 
+// ---- Gallery of real past Custom Alphabet commissions ---------------
+const ALPHA_GALLERY = [
+  { image: "assets/images/alphabets/k-letter.jpg", caption: "Premium Customized — mosaic pattern-fill" },
+  { image: "assets/images/alphabets/s-letter.jpg", caption: "Premium Customized — a gift for a debut author" },
+  { image: "assets/images/alphabets/go-green.jpg", caption: "Customized — a short phrase, illustrated" },
+  { image: "assets/images/alphabets/word-cloud.jpg", caption: "Customized — words chosen for a 40th anniversary" },
+];
+
 // ---- Porter / delivery note for physical (printed or framed) items --
 const PORTER_NOTE = "Printed and framed pieces are packed flat and hand-delivered by Porter for safe handling in Delhi NCR, Mumbai, Bengaluru, Pune, Hyderabad & Chennai. Porter's fare depends on your exact pickup-to-drop distance, so we confirm the final delivery charge on WhatsApp before you pay — usually ₹80–₹250 within city limits. Outside these cities, we ship via a tracked courier at a flat ₹149.";
 

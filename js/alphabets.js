@@ -22,6 +22,18 @@ function renderTierCompare() {
   ).join("");
 }
 
+function renderAlphaGallery() {
+  const el = document.getElementById("alphaGallery");
+  if (!el) return;
+  el.innerHTML = ALPHA_GALLERY.map(
+    (g) => `
+    <div class="cat-card">
+      <div class="art-block has-img"><img src="${g.image}" alt="${g.caption}" loading="lazy"></div>
+      <div class="cat-body"><p style="font-size:.85rem;margin:0;">${g.caption}</p></div>
+    </div>`
+  ).join("");
+}
+
 function renderSwatches() {
   const el = document.getElementById("alphaSwatches");
   if (!el) return;
@@ -98,6 +110,7 @@ function alphaAddToCart() {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderTierCompare();
+  renderAlphaGallery();
   renderSwatches();
   alphaRefresh();
   document.getElementById("alphaWord")?.addEventListener("input", alphaRefresh);
