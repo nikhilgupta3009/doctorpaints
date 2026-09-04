@@ -2,13 +2,17 @@
    More by Shilpi — shared header/footer + mobile nav + cart drawer wiring
    =================================================================== */
 
-// Flat entries mixed with dropdown groups (from BUCKETS). Order shown in nav.
+// Simple flat nav — bucket pages (Expressions/Inspiration) link straight to
+// their hub, which in turn links to the two sub-pages. No dropdown menus.
 const NAV_LINKS = [
-  { href: "expressions.html", label: "Expressions", key: "expressions", group: BUCKETS[0] },
-  { href: "inspiration.html", label: "Inspiration", key: "inspiration", group: BUCKETS[1] },
+  { href: "index.html", label: "Home", key: "home" },
+  { href: "expressions.html", label: "Expressions", key: "expressions", bucket: "expressions" },
+  { href: "inspiration.html", label: "Inspiration", key: "inspiration", bucket: "inspiration" },
   { href: "about.html", label: "About", key: "about" },
   { href: "contact.html", label: "Contact", key: "contact" },
 ];
+
+const CART_ICON_SVG = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>`;
 
 function renderHeader() {
   const mount = document.getElementById("site-header");
@@ -16,52 +20,30 @@ function renderHeader() {
   const active = document.body.dataset.page;
   const activeBucket = document.body.dataset.bucket;
 
-  const isActive = (l) => active === l.key || (l.group && activeBucket === l.group.key);
+  const isActive = (l) => active === l.key || (l.bucket && activeBucket === l.bucket);
 
-  const desktopLinkHtml = () =>
-    NAV_LINKS.map((l) => {
-      if (!l.group) {
-        return `<a href="${l.href}" class="${isActive(l) ? "active" : ""}">${l.label}</a>`;
-      }
-      const children = l.group.children
-        .map(
-          (c) =>
-            `<a href="${c.href}"><span>${c.label}</span><small>${c.blurb}</small></a>`
-        )
-        .join("");
-      return `
-        <div class="nav-item">
-          <a href="${l.href}" class="nav-dropdown-trigger ${isActive(l) ? "active" : ""}">${l.label} <span class="caret">▾</span></a>
-          <div class="nav-dropdown-panel">
-            <a href="${l.href}" class="nav-dropdown-all">All of ${l.label} →</a>
-            ${children}
-          </div>
-        </div>`;
-    }).join("");
-
-  const mobileLinkHtml = () =>
-    NAV_LINKS.map((l) => {
-      if (!l.group) {
-        return `<a href="${l.href}" class="${isActive(l) ? "active" : ""}">${l.label}</a>`;
-      }
-      const children = l.group.children
-        .map((c) => `<a href="${c.href}" class="mobile-sub-link">${c.label}</a>`)
-        .join("");
-      return `<a href="${l.href}" class="${isActive(l) ? "active" : ""}">${l.label}</a>${children}`;
-    }).join("");
+  const linkHtml = () =>
+    NAV_LINKS.map(
+      (l) => `<a href="${l.href}" class="${isActive(l) ? "active" : ""}">${l.label}</a>`
+    ).join("");
 
   mount.innerHTML = `
-    <div class="banner">Handmade, made-to-order art · Ships across India · <a href="story-frame.html" style="text-decoration:underline;">Start a custom "Story in a Frame"</a></div>
     <header class="site-header">
       <div class="container header-row">
-        <a href="index.html" class="logo">${BRAND.name}<span class="dot">.</span></a>
-        <nav class="nav-links">${desktopLinkHtml()}</nav>
+        <a href="index.html" class="logo">
+          <span class="logo-name">${BRAND.name}</span>
+          <span class="logo-tagline">Handmade Art</span>
+        </a>
+        <nav class="nav-links">${linkHtml()}</nav>
         <div class="header-actions">
-          <button class="cart-btn" onclick="openCart()">🛍 Cart <span class="cart-count" data-cart-count>0</span></button>
+          <button class="cart-btn" onclick="openCart()" aria-label="Open cart">
+            ${CART_ICON_SVG}
+            <span class="cart-count" data-cart-count>0</span>
+          </button>
           <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
         </div>
       </div>
-      <div class="mobile-menu" id="mobileMenu">${mobileLinkHtml()}</div>
+      <div class="mobile-menu" id="mobileMenu">${linkHtml()}</div>
     </header>
   `;
 
