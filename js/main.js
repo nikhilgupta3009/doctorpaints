@@ -5,8 +5,8 @@
 // Flat top-level nav. Contact stays footer-only, matching the reference layout.
 const NAV_LINKS = [
   { href: "index.html", label: "Home", key: "home" },
-  { href: "expressions.html", label: "Expressions", key: "expressions", bucket: "expressions" },
-  { href: "inspirations.html", label: "Inspirations", key: "inspirations", bucket: "inspirations" },
+  { href: "expressions.html", label: "Through my eyes", key: "expressions", bucket: "expressions" },
+  { href: "inspirations.html", label: "Art that starts with your story", key: "inspirations", bucket: "inspirations" },
 ];
 // Learn / About / Events are no longer top-nav items — still reachable via
 // the footer's "Visit" column (see renderFooter below) and their own URLs.
@@ -65,8 +65,8 @@ function renderFooter() {
           <div>
             <h4>Shop</h4>
             <ul>
-              <li><a href="expressions.html">Expressions</a></li>
-              <li><a href="inspirations.html">Inspirations</a></li>
+              <li><a href="expressions.html">Through my eyes</a></li>
+              <li><a href="inspirations.html">Art that starts with your story</a></li>
               <li><a href="alphabets.html">Custom Alphabets</a></li>
               <li><a href="story-frame.html">Your Story in a Frame</a></li>
             </ul>
