@@ -277,14 +277,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   aspect-ratio: 35/6;
   min-height: 340px;
   overflow: hidden;
-  background-color: var(--ink);
-  background-size: cover;
-  background-position: center;
-}
-.hero-bleed::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: rgba(20,16,13,.62);
+  background-color: #000;
 }
 .hero-bleed-copy {
   position: absolute;
