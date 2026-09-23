@@ -35,12 +35,9 @@
 </section>
 
 <section class="section section--alt">
-  <div class="container">
+  <div class="container" style="text-align:center;">
     <p class="category-heading">Art that starts with your story</p>
-    <div class="grid grid--4" id="homeFineArtPrints"></div>
-    <div style="text-align:center;margin-top:32px;">
-      <a href="inspirations.html" class="btn btn--outline">View All</a>
-    </div>
+    <p class="lede" style="max-width:40ch;margin:0 auto;">Coming soon.</p>
   </div>
 </section>
 
@@ -103,21 +100,6 @@
           <h3>${p.title}</h3>
           <p style="font-size:.85rem;">${p.medium}</p>
           <div class="price-line">${p.status === "sold" ? '<span class="sold-label">Sold</span>' : `<span></span><span>${money(p.price)}</span>`}</div>
-        </div>
-      </a>`
-      )
-      .join("");
-
-    document.getElementById("homeFineArtPrints").innerHTML = PRINTS.slice(0, 4)
-      .map(
-        (p) => `
-      <a href="inspirations.html" class="cat-card pcard">
-        <span class="badge-new">New</span>
-        <div class="art-block ${p.art}"><span>${p.title}</span></div>
-        <div class="quick-view-layer"><span class="quick-view-pill">Quick View</span></div>
-        <div class="cat-body">
-          <h3>${p.title}</h3>
-          <div class="price-line"><span class="price-from">From</span><span>${money(p.priceDigital.a4)}</span></div>
         </div>
       </a>`
       )

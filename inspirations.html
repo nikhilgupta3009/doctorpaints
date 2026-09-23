@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Art That Starts With Your Story — More by Shilpi</title>
-<meta name="description" content="Hand-painted designs reproduced as fine art prints and word art — instant digital download, or a printed / framed copy delivered via Porter.">
+<meta name="description" content="Art that starts with your story — coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Alex+Brush&family=Sacramento&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=2">
@@ -13,133 +13,18 @@
 
 <div id="site-header"></div>
 
-<section class="section section--tight">
+<section class="section" style="padding:120px 0;text-align:center;">
   <div class="container">
     <span class="eyebrow">Art that starts with your story</span>
-    <h1>Reproductions of our favourite pieces</h1>
-    <p class="lede" style="max-width:60ch;">Every design starts as an original painting, then gets reproduced for you — as an instant download, a printed copy, or framed and delivered by Porter. Prefer something built entirely around you? Scroll down to commission a custom original.</p>
+    <h1>Coming soon</h1>
+    <p class="lede" style="max-width:52ch;margin-left:auto;margin-right:auto;">We're putting the finishing touches on this collection. Check back soon, or head to <a href="expressions.html" style="color:var(--terracotta);font-weight:600;">Through my eyes</a> in the meantime.</p>
   </div>
 </section>
-
-<section class="section--tight">
-  <div class="container">
-    <p class="category-heading">Prints</p>
-    <div class="grid grid--4" id="printsGrid"></div>
-  </div>
-</section>
-
-<section class="section--tight section--alt">
-  <div class="container">
-    <p class="category-heading">Word Art</p>
-    <div class="grid grid--3" id="motivationGrid"></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow">Or start from scratch</span>
-      <h2>Commission a Custom Original</h2>
-      <p>Two ways to get a one-of-a-kind piece built entirely around you — your name, your story, your people.</p>
-    </div>
-    <div class="grid grid--2">
-      <a href="alphabets.html" class="cat-card">
-        <div class="art-block art--3"><span>Custom Alphabets</span></div>
-        <div class="cat-body">
-          <span class="pill pill--gold">Basic · Customized · Premium</span>
-          <h3>Custom Alphabets</h3>
-          <p>Hand-lettered initials personalised with your colours, motifs and story.</p>
-          <div class="price-line"><span class="price-from">From</span><span>₹349</span></div>
-        </div>
-      </a>
-      <a href="story-frame.html" class="cat-card">
-        <div class="art-block art--4"><span>Your Story in a Frame</span></div>
-        <div class="cat-body">
-          <span class="pill pill--gold">Fully custom</span>
-          <h3>Your Story in a Frame</h3>
-          <p>Tell us who and what you love — we illustrate it into one keepsake.</p>
-          <div class="price-line"><span class="price-from">Starting</span><span>₹1,999</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt" id="paper-guide">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Before you buy</span>
-      <h2>Sizes & paper guide</h2>
-      <p>Two sizes to choose from, and everything you need to print it perfectly at home or at a lab.</p>
-    </div>
-    <div class="grid grid--2" style="margin-bottom:28px;">
-      <div class="cat-card" style="flex-direction:row;align-items:center;padding:20px;gap:16px;">
-        <div class="art-block art--1" style="width:80px;height:80px;border-radius:12px;font-size:.9rem;flex-shrink:0;">A4</div>
-        <div><h3 style="margin-bottom:4px;">A4 — 21 x 29.7 cm</h3><p style="margin:0;font-size:.88rem;">Desk shelves, small gallery walls, gifting.</p></div>
-      </div>
-      <div class="cat-card" style="flex-direction:row;align-items:center;padding:20px;gap:16px;">
-        <div class="art-block art--5" style="width:80px;height:80px;border-radius:12px;font-size:.9rem;flex-shrink:0;">A3</div>
-        <div><h3 style="margin-bottom:4px;">A3 — 29.7 x 42 cm</h3><p style="margin:0;font-size:.88rem;">A statement piece above a sofa, bed or console.</p></div>
-      </div>
-    </div>
-    <div class="paper-guide" id="paperGuide"></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Printed or framed copies</span>
-      <h2>Want us to print it for you?</h2>
-      <p>Choose "Printed Only" or "Framed & Printed" on any design. Since larger framed pieces need careful, padded delivery, we use Porter for safe hand-delivery within city limits.</p>
-    </div>
-    <div class="note-box" id="porterNote" style="max-width:70ch;"></div>
-  </div>
-</section>
-
-<!-- Product configurator modal -->
-<div class="cart-overlay" id="printOverlay" onclick="closePrintModal()"></div>
-<div class="cart-drawer" id="printModal" style="width:480px;">
-  <div class="cart-head">
-    <h3 style="margin:0;" id="pmTitle">Design</h3>
-    <button class="cart-close" onclick="closePrintModal()">✕</button>
-  </div>
-  <div style="padding:20px 24px;overflow-y:auto;flex:1;">
-    <div class="art-block" id="pmArt" style="border-radius:14px;margin-bottom:16px;"><span id="pmArtLabel"></span></div>
-    <p id="pmBlurb" style="font-size:.9rem;"></p>
-
-    <div class="option-group">
-      <label class="group-label">Format</label>
-      <div class="option-row" id="pmFormatRow"></div>
-    </div>
-
-    <div class="option-group">
-      <label class="group-label">Size</label>
-      <div class="option-row" id="pmSizeRow"></div>
-    </div>
-
-    <div class="note-box" id="pmPorterNote" style="display:none;"></div>
-
-    <div class="option-group" style="margin-top:20px;">
-      <label class="group-label">Quantity</label>
-      <div class="qty-row">
-        <button onclick="pmChangeQty(-1)">−</button>
-        <input type="text" id="pmQty" value="1" readonly>
-        <button onclick="pmChangeQty(1)">+</button>
-      </div>
-    </div>
-  </div>
-  <div class="cart-foot" style="display:block;">
-    <div class="cart-subtotal"><span>Price</span><span id="pmPrice">₹0</span></div>
-    <button class="btn btn--primary btn--block" onclick="pmAddToCart()">Add to Cart</button>
-  </div>
-</div>
 
 <div id="site-footer"></div>
 
 <script src="js/data.js?v=2"></script>
 <script src="js/cart.js?v=2"></script>
 <script src="js/main.js?v=2"></script>
-<script src="js/inspirations.js?v=2"></script>
 </body>
 </html>
