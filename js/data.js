@@ -154,6 +154,36 @@ const ORIGINAL_ART = [
     status: "available", // "available" | "sold"
     isNew: true,
   },
+  {
+    id: "entangled-rhythms",
+    title: "Entangled Rhythms",
+    art: "art--2",
+    image: "assets/images/expressions/entangled-rhythm.jpg",
+    medium: "Acrylic on canvas",
+    price: 24000,
+    status: "available",
+    isNew: true,
+  },
+  {
+    id: "interwoven",
+    title: "Interwoven",
+    art: "art--3",
+    image: "assets/images/expressions/interwoven.jpg",
+    medium: "Acrylic on canvas",
+    price: 24000,
+    status: "available",
+    isNew: true,
+  },
+  {
+    id: "the-world-within",
+    title: "The World Within",
+    art: "art--4",
+    image: "assets/images/expressions/world-within.jpg",
+    medium: "Acrylic on canvas",
+    price: 24000,
+    status: "available",
+    isNew: true,
+  },
 ];
 
 // ---- Learn: short original guides (paper care, sizing, commissioning) --
