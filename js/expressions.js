@@ -1,6 +1,6 @@
 /* ===================================================================
-   More by Shilpi — Expressions grid + Quick View modal
-   One-of-a-kind physical pieces: no cart add, WhatsApp enquiry instead.
+   More by Shilpi — Expressions grid
+   One-of-a-kind physical pieces: each card links to its own product page.
    =================================================================== */
 
 function renderOriginalArtGrid() {
@@ -8,48 +8,17 @@ function renderOriginalArtGrid() {
   if (!grid) return;
   grid.innerHTML = ORIGINAL_ART.map(
     (p) => `
-    <div class="cat-card pcard" onclick="openOaModal('${p.id}')" style="cursor:pointer;">
+    <a href="product.html?id=${p.id}" class="cat-card pcard">
       ${p.isNew ? '<span class="badge-new">New</span>' : ""}
       ${p.status === "sold" ? '<span class="badge-sold">Sold</span>' : ""}
       <div class="art-block ${p.art} ${p.image ? "has-img" : ""}">${p.image ? `<img src="${p.image}" alt="${p.title}" loading="lazy">` : `<span>${p.title}</span>`}</div>
-      <div class="quick-view-layer"><span class="quick-view-pill">Quick View</span></div>
       <div class="cat-body">
         <h3>${p.title}</h3>
         <p style="font-size:.85rem;">${p.medium}</p>
         <div class="price-line">${p.status === "sold" ? '<span class="sold-label">Sold</span>' : `<span></span><span>${money(p.price)}</span>`}</div>
       </div>
-    </div>`
+    </a>`
   ).join("");
-}
-
-function openOaModal(id) {
-  const p = ORIGINAL_ART.find((x) => x.id === id);
-  if (!p) return;
-  document.getElementById("oaTitle").textContent = p.title;
-  const oaArt = document.getElementById("oaArt");
-  oaArt.className = `art-block ${p.art} ${p.image ? "has-img" : ""}`;
-  oaArt.innerHTML = p.image
-    ? `<img src="${p.image}" alt="${p.title}">`
-    : `<span id="oaArtLabel">${p.title}</span>`;
-  document.getElementById("oaMedium").textContent = p.medium;
-  document.getElementById("oaPrice").textContent = p.status === "sold" ? "Sold" : money(p.price);
-
-  const waBtn = document.getElementById("oaWaBtn");
-  if (p.status === "sold") {
-    waBtn.textContent = "Ask About Similar Pieces";
-    waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! "${p.title}" looks sold — do you have anything similar, or can you paint me something like it?`)}`;
-  } else {
-    waBtn.textContent = "Enquire on WhatsApp";
-    waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'm interested in the original "${p.title}" (${p.medium}, ${money(p.price)}). Is it still available?`)}`;
-  }
-
-  document.getElementById("oaModal").classList.add("open");
-  document.getElementById("oaOverlay").classList.add("open");
-}
-
-function closeOaModal() {
-  document.getElementById("oaModal")?.classList.remove("open");
-  document.getElementById("oaOverlay")?.classList.remove("open");
 }
 
 document.addEventListener("DOMContentLoaded", renderOriginalArtGrid);
