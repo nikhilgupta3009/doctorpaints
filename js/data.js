@@ -206,6 +206,24 @@ const STORY_ART = [
       "Love",
     ],
   },
+  {
+    id: "eat-love-dance",
+    title: "Eat Love Dance",
+    art: "art--2",
+    image: "assets/images/expressions/eat-love-dance.jpg",
+    medium: "Personalised keepsake · fully customisable",
+    price: 2799,
+    status: "available",
+    isNew: true,
+    description: [
+      "This was obviously created for a person who loves dancing, though has stopped because life happens.",
+      "She loved the piece and promised me that she will resume her dancing. Just a small step for reminding people to do what they actually want to do.",
+      "If you wish to remind someone, even yourself that something needs to be done, this I believe is an intriguing way to do the same.",
+      "Fully customizable. You can choose the colour theme as well as what message you want.",
+      "Thank you for dropping by!",
+      "Love",
+    ],
+  },
 ];
 
 // ---- Learn: short original guides (paper care, sizing, commissioning) --
