@@ -192,7 +192,7 @@ const STORY_ART = [
     id: "beauty-of-life",
     title: "Beauty of life",
     art: "art--5",
-    image: "assets/images/expressions/beauty-of-life.jpg",
+    image: "assets/images/expressions/beauty-of-life.webp",
     medium: "Personalised keepsake · fully customisable",
     price: 2799,
     status: "available",
