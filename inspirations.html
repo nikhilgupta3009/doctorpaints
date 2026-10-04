@@ -13,11 +13,17 @@
 
 <div id="site-header"></div>
 
-<section class="section" style="padding:120px 0;text-align:center;">
+<section class="section section--tight">
   <div class="container">
     <span class="eyebrow">Art that starts with your story</span>
-    <h1>Coming soon</h1>
-    <p class="lede" style="max-width:52ch;margin-left:auto;margin-right:auto;">We're putting the finishing touches on this collection. Check back soon, or head to <a href="expressions.html" style="color:var(--terracotta);font-weight:600;">Through my eyes</a> in the meantime.</p>
+    <h1>Made around you</h1>
+    <p class="lede" style="max-width:60ch;">Personalised pieces, painted around the people and moments that matter to you.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="grid grid--4" id="storyArtGrid"></div>
   </div>
 </section>
 
@@ -26,5 +32,21 @@
 <script src="js/data.js?v=2"></script>
 <script src="js/cart.js?v=2"></script>
 <script src="js/main.js?v=2"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("storyArtGrid").innerHTML = STORY_ART.map(
+      (p) => `
+      <a href="product.html?id=${p.id}" class="cat-card pcard">
+        ${p.isNew ? '<span class="badge-new">New</span>' : ""}
+        <div class="art-block ${p.art} ${p.image ? "has-img" : ""}">${p.image ? `<img src="${p.image}" alt="${p.title}" loading="lazy">` : `<span>${p.title}</span>`}</div>
+        <div class="cat-body">
+          <h3>${p.title}</h3>
+          <p style="font-size:.85rem;">${p.medium}</p>
+          <div class="price-line"><span></span><span>${money(p.price)}</span></div>
+        </div>
+      </a>`
+    ).join("");
+  });
+</script>
 </body>
 </html>

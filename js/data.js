@@ -186,6 +186,28 @@ const ORIGINAL_ART = [
   },
 ];
 
+// ---- Art that starts with your story: customisable personalised pieces --
+const STORY_ART = [
+  {
+    id: "beauty-of-life",
+    title: "Beauty of life",
+    art: "art--5",
+    image: "assets/images/expressions/beauty-of-life.jpg",
+    medium: "Personalised keepsake · fully customisable",
+    price: 2799,
+    status: "available",
+    isNew: true,
+    description: [
+      "Made this for a friend who turned 40, a milestone birthday.",
+      "Really didn’t know what to give her, then this incomplete piece came to my mind. Creating this was like therapy and the reaction and happiness for whom it was made was absolutely worth the effort.",
+      "If you believe in personalized gifts and want to gift someone a life long memory, choose this.",
+      "Fully customizable. You can choose the background details as well as what attributes you want to write for the person.",
+      "Thank you for dropping by!",
+      "Love",
+    ],
+  },
+];
+
 // ---- Learn: short original guides (paper care, sizing, commissioning) --
 const LEARN_ARTICLES = [
   {
