@@ -223,6 +223,25 @@ const ORIGINAL_ART = [
       "This one was fascinating for me, I hope it gives you a quiet moment to pause, wander, and find what you are looking for.",
     ],
   },
+  {
+    id: "order-in-disorder",
+    title: "Order in disorder",
+    art: "art--2",
+    image: "assets/images/expressions/order-in-disorder.png",
+    images: [
+      "assets/images/expressions/order-in-disorder.png",
+      "assets/images/expressions/order-in-disorder-room.webp",
+    ],
+    medium: "Acrylic on canvas",
+    price: 24000,
+    status: "available",
+    isNew: true,
+    bullets: [
+      "At first glance, Order in Disorder feels like a collection of scattered forms — circles, lines, patterns and spaces, each moving in its own direction. But look a little closer, and small relationships begin to appear. The repetition, movement and rhythm create a quiet structure within the apparent chaos.",
+      "The piece is a reminder that things don't always need to be perfectly arranged to feel balanced. Sometimes, there is a natural order in the way different shapes, ideas and moments find their place alongside one another.",
+      "What began as scattered shapes slowly became something whole. I hope you enjoy discovering its little details as much as I enjoyed creating them.",
+    ],
+  },
 ];
 
 // ---- Art that starts with your story: customisable personalised pieces --
