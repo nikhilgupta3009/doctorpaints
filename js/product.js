@@ -32,13 +32,33 @@ function renderProductPage() {
     ? `<img src="${p.image}" alt="${p.title}">`
     : `<span>${p.title}</span>`;
 
+  if (p.images && p.images.length > 1) {
+    art.style.aspectRatio = "3/4";
+    const thumbs = document.getElementById("productThumbs");
+    thumbs.innerHTML = p.images
+      .map(
+        (src, i) =>
+          `<button type="button" class="${i === 0 ? "active" : ""}" data-src="${src}" aria-label="View image ${i + 1} of ${p.images.length}"><img src="${src}" alt=""></button>`
+      )
+      .join("");
+    thumbs.addEventListener("click", (e) => {
+      const btn = e.target.closest("button");
+      if (!btn) return;
+      art.querySelector("img").src = btn.dataset.src;
+      thumbs.querySelectorAll("button").forEach((b) => b.classList.toggle("active", b === btn));
+    });
+  }
+
   if (p.isNew) document.getElementById("productNewBadge").style.display = "inline-block";
   document.getElementById("productTitle").textContent = p.title;
   document.getElementById("productMedium").textContent = p.medium;
   document.getElementById("productPrice").textContent = p.status === "sold" ? "Sold" : money(p.price);
 
   const desc = document.getElementById("productDesc");
-  if (p.description) {
+  if (p.bullets) {
+    desc.className = "product-desc";
+    desc.innerHTML = `<ul>${p.bullets.map((t) => `<li>${t}</li>`).join("")}</ul>`;
+  } else if (p.description) {
     desc.innerHTML = p.description.map((t) => `<p>${t}</p>`).join("");
   } else {
     desc.remove();

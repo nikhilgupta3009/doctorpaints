@@ -149,10 +149,20 @@ const ORIGINAL_ART = [
     title: "Becoming",
     art: "art--1",
     image: "assets/images/expressions/becoming.webp",
+    images: [
+      "assets/images/expressions/becoming.webp",
+      "assets/images/expressions/becoming-room.webp",
+    ],
     medium: "Acrylic on canvas",
     price: 24000,
     status: "available", // "available" | "sold"
     isNew: true,
+    bullets: [
+      "Somewhere between who we are and who we are yet to be, we are always becoming.",
+      "Becoming is a quiet reflection of that journey — of change, growth, and the many little moments that shape us along the way. The shifting forms come together gradually, much like life itself: imperfect, evolving, and finding its own rhythm.",
+      "A piece about embracing where you are, while gently making space for who you are becoming.",
+      "I loved watching this piece slowly take shape and it grew on me as I created it. I hope it grows on you too, and becomes something that comforts you and feels quietly yours.",
+    ],
   },
   {
     id: "entangled-rhythms",
