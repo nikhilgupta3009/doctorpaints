@@ -28,8 +28,9 @@ function renderProductPage() {
 
   const art = document.getElementById("productArt");
   art.className = `art-block ${p.art} ${p.image ? "has-img" : ""}`;
-  art.innerHTML = p.image
-    ? `<img src="${p.image}" alt="${p.title}">`
+  const mainSrc = (p.images && p.images[0]) || p.image;
+  art.innerHTML = mainSrc
+    ? `<img src="${mainSrc}" alt="${p.title}">`
     : `<span>${p.title}</span>`;
 
   if (p.images && p.images.length > 1) {

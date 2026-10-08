@@ -150,8 +150,8 @@ const ORIGINAL_ART = [
     art: "art--1",
     image: "assets/images/expressions/becoming.webp",
     images: [
-      "assets/images/expressions/becoming.webp",
       "assets/images/expressions/becoming-room.webp",
+      "assets/images/expressions/becoming.webp",
     ],
     medium: "Acrylic on canvas",
     price: 24000,
@@ -170,8 +170,8 @@ const ORIGINAL_ART = [
     art: "art--2",
     image: "assets/images/expressions/entangled-rhythm.jpg",
     images: [
-      "assets/images/expressions/entangled-rhythm.jpg",
       "assets/images/expressions/entangled-rhythms-room.webp",
+      "assets/images/expressions/entangled-rhythm.jpg",
     ],
     medium: "Acrylic on canvas",
     price: 24000,
@@ -209,8 +209,8 @@ const ORIGINAL_ART = [
     art: "art--1",
     image: "assets/images/expressions/the-passage.png",
     images: [
-      "assets/images/expressions/the-passage.png",
       "assets/images/expressions/the-passage-room.webp",
+      "assets/images/expressions/the-passage.png",
     ],
     medium: "Acrylic on canvas",
     price: 24000,
@@ -229,8 +229,8 @@ const ORIGINAL_ART = [
     art: "art--2",
     image: "assets/images/expressions/order-in-disorder.png",
     images: [
-      "assets/images/expressions/order-in-disorder.png",
       "assets/images/expressions/order-in-disorder-room.webp",
+      "assets/images/expressions/order-in-disorder.png",
     ],
     medium: "Acrylic on canvas",
     price: 24000,
