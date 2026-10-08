@@ -203,6 +203,26 @@ const ORIGINAL_ART = [
     status: "available",
     isNew: true,
   },
+  {
+    id: "the-passage",
+    title: "The Passage",
+    art: "art--1",
+    image: "assets/images/expressions/the-passage.png",
+    images: [
+      "assets/images/expressions/the-passage.png",
+      "assets/images/expressions/the-passage-room.webp",
+    ],
+    medium: "Acrylic on canvas",
+    price: 24000,
+    status: "available",
+    isNew: true,
+    bullets: [
+      "Life rarely moves in a straight line. There are pauses, turns, unexpected detours, and moments when we simply find ourselves moving in a new direction.",
+      "The Passage is inspired by these quiet transitions - the passages move, bend and cross over one another, never quite following a straight course. Yet somehow, they continue to lead us forward.",
+      "Perhaps that is what makes a passage meaningful — we don't always know where it will take us, but we keep moving.",
+      "This one was fascinating for me, I hope it gives you a quiet moment to pause, wander, and find what you are looking for.",
+    ],
+  },
 ];
 
 // ---- Art that starts with your story: customisable personalised pieces --
