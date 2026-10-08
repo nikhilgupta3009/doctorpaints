@@ -169,10 +169,19 @@ const ORIGINAL_ART = [
     title: "Entangled Rhythms",
     art: "art--2",
     image: "assets/images/expressions/entangled-rhythm.jpg",
+    images: [
+      "assets/images/expressions/entangled-rhythm.jpg",
+      "assets/images/expressions/entangled-rhythms-room.webp",
+    ],
     medium: "Acrylic on canvas",
     price: 24000,
     status: "available",
     isNew: true,
+    bullets: [
+      "Life has a way of bringing different things together — people, moments, thoughts and experiences — sometimes gently, sometimes all at once. Entangled Rhythms is inspired by those connections and the quiet patterns they create in our lives.",
+      "The lines weave, cross and move alongside one another, each following its own rhythm while becoming part of something larger.",
+      "I enjoyed letting this piece unfold without knowing exactly where each line would lead. Perhaps that is part of what makes it feel alive. Hope this piece brings warmth to your space too!",
+    ],
   },
   {
     id: "interwoven",
