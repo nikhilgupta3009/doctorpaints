@@ -208,6 +208,10 @@ const ORIGINAL_ART = [
     title: "The World Within",
     art: "art--4",
     image: "assets/images/expressions/world-within.jpg",
+    images: [
+      "assets/images/expressions/world-within-room.webp",
+      "assets/images/expressions/world-within.jpg",
+    ],
     medium: "Acrylic on canvas",
     price: 24000,
     status: "available",
