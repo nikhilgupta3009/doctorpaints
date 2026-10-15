@@ -152,6 +152,7 @@ const ORIGINAL_ART = [
     images: [
       "assets/images/expressions/becoming-room.webp",
       "assets/images/expressions/becoming.webp",
+      "assets/images/expressions/becoming-room-2.webp",
     ],
     medium: "Acrylic on canvas",
     price: 24000,
