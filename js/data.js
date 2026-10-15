@@ -191,6 +191,7 @@ const ORIGINAL_ART = [
     image: "assets/images/expressions/interwoven.jpg",
     images: [
       "assets/images/expressions/interwoven-room.webp",
+      "assets/images/expressions/interwoven-room-2.webp",
       "assets/images/expressions/interwoven.jpg",
     ],
     medium: "Acrylic on canvas",
