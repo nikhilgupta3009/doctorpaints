@@ -150,9 +150,9 @@ const ORIGINAL_ART = [
     art: "art--1",
     image: "assets/images/expressions/becoming.webp",
     images: [
+      "assets/images/expressions/becoming-room-2.webp",
       "assets/images/expressions/becoming-room.webp",
       "assets/images/expressions/becoming.webp",
-      "assets/images/expressions/becoming-room-2.webp",
     ],
     medium: "Acrylic on canvas",
     price: 24000,
