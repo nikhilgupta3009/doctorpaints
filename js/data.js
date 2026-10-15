@@ -230,6 +230,8 @@ const ORIGINAL_ART = [
     art: "art--2",
     image: "assets/images/expressions/order-in-disorder.png",
     images: [
+      "assets/images/expressions/order-in-disorder-room-2.webp",
+      "assets/images/expressions/order-in-disorder-room-3.webp",
       "assets/images/expressions/order-in-disorder-room.webp",
       "assets/images/expressions/order-in-disorder.png",
     ],
