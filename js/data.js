@@ -189,10 +189,18 @@ const ORIGINAL_ART = [
     title: "Interwoven",
     art: "art--3",
     image: "assets/images/expressions/interwoven.jpg",
+    images: [
+      "assets/images/expressions/interwoven-room.webp",
+      "assets/images/expressions/interwoven.jpg",
+    ],
     medium: "Acrylic on canvas",
     price: 24000,
     status: "available",
     isNew: true,
+    bullets: [
+      "A piece that feels different each time you look at it, yet finds its place effortlessly in the space you call your own. In this artwork, the patterns draw you in, the curves keep the eye moving, and the spaces in between give the composition room to breathe.",
+      "I went into this with no grand plan for how every shape would fit together. Watching it come together, one line at a time, was perhaps my favorite part.",
+    ],
   },
   {
     id: "the-world-within",
