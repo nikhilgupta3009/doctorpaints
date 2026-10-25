@@ -32,6 +32,7 @@ function renderProductPage() {
   art.innerHTML = mainSrc
     ? `<img src="${mainSrc}" alt="${p.title}">`
     : `<span>${p.title}</span>`;
+  art.classList.toggle("fit-whole", (p.wholeImages || []).includes(mainSrc));
 
   if (p.images && p.images.length > 1) {
     art.style.aspectRatio = "3/4";
@@ -46,6 +47,7 @@ function renderProductPage() {
       const btn = e.target.closest("button");
       if (!btn) return;
       art.querySelector("img").src = btn.dataset.src;
+      art.classList.toggle("fit-whole", (p.wholeImages || []).includes(btn.dataset.src));
       thumbs.querySelectorAll("button").forEach((b) => b.classList.toggle("active", b === btn));
     });
   }

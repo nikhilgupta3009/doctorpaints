@@ -266,6 +266,7 @@ const STORY_ART = [
       "assets/images/expressions/beauty-of-life-room-2.webp",
       "assets/images/expressions/beauty-of-life.webp",
     ],
+    wholeImages: ["assets/images/expressions/beauty-of-life-room-2.webp"],
     medium: "Personalised keepsake · fully customisable",
     price: 2799,
     status: "available",

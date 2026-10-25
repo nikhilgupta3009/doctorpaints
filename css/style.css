@@ -459,6 +459,9 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .gallery-thumbs { display: flex; gap: 10px; margin-top: 12px; }
 .gallery-thumbs .art-block { width: 76px; height: 76px; aspect-ratio: auto; border-radius: var(--radius-s); font-size: 1rem; }
 
+.art-block.fit-whole img { object-fit: contain; }
+.product-layout--page { grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: start; }
+.product-layout--page > * { min-width: 0; }
 .product-gallery { display: flex; gap: 14px; align-items: flex-start; }
 .product-gallery #productArt { flex: 1; min-width: 0; }
 .product-thumbs { display: flex; flex-direction: column; gap: 10px; }
