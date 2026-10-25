@@ -151,8 +151,15 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   gap: 2px;
   line-height: 1;
 }
+@font-face {
+  font-family: "Satisfy";
+  src: url("../assets/fonts/Satisfy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 .logo-name {
-  font-family: "Alex Brush", cursive;
+  font-family: "Satisfy", "Alex Brush", cursive;
   font-size: 2.1rem;
   font-weight: 400;
   color: var(--ink);
