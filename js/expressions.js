@@ -15,7 +15,7 @@ function renderOriginalArtGrid() {
       <div class="art-block ${p.art} ${cover ? "has-img" : ""}">${cover ? `<img src="${cover}" alt="${p.title}" loading="lazy">` : `<span>${p.title}</span>`}</div>
       <div class="cat-body">
         <h3>${p.title}</h3>
-        <p style="font-size:.85rem;">${p.medium}</p>
+        ${p.medium ? `<p style="font-size:.85rem;">${p.medium}</p>` : ""}
         <div class="price-line">${p.status === "sold" ? '<span class="sold-label">Sold</span>' : `<span></span><span>${money(p.price)}</span>`}</div>
       </div>
     </a>`;

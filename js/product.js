@@ -52,7 +52,9 @@ function renderProductPage() {
 
   if (p.isNew) document.getElementById("productNewBadge").style.display = "inline-block";
   document.getElementById("productTitle").textContent = p.title;
-  document.getElementById("productMedium").textContent = p.medium;
+  const mediumEl = document.getElementById("productMedium");
+  if (p.medium) mediumEl.textContent = p.medium;
+  else mediumEl.remove();
   document.getElementById("productPrice").textContent = p.status === "sold" ? "Sold" : money(p.price);
 
   const desc = document.getElementById("productDesc");
@@ -78,7 +80,7 @@ function renderProductPage() {
     waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'd love a personalised "${p.title}" piece (${money(p.price)}). Can we talk about the details?`)}`;
   } else {
     waBtn.textContent = "Enquire on WhatsApp";
-    waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'm interested in the original "${p.title}" (${p.medium}, ${money(p.price)}). Is it still available?`)}`;
+    waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'm interested in the original "${p.title}" (${[p.medium, money(p.price)].filter(Boolean).join(", ")}). Is it still available?`)}`;
   }
 }
 
