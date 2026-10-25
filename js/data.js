@@ -285,6 +285,11 @@ const STORY_ART = [
     title: "Eat Love Dance",
     art: "art--2",
     image: "assets/images/expressions/eat-love-dance.webp",
+    images: [
+      "assets/images/expressions/eat-love-dance-room.webp",
+      "assets/images/expressions/eat-love-dance.webp",
+    ],
+    wholeImages: ["assets/images/expressions/eat-love-dance-room.webp"],
     medium: "Personalised keepsake · fully customisable",
     price: 2799,
     status: "available",
