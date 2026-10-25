@@ -263,6 +263,7 @@ const STORY_ART = [
     image: "assets/images/expressions/beauty-of-life.webp",
     images: [
       "assets/images/expressions/beauty-of-life-room.webp",
+      "assets/images/expressions/beauty-of-life-room-2.webp",
       "assets/images/expressions/beauty-of-life.webp",
     ],
     medium: "Personalised keepsake · fully customisable",
