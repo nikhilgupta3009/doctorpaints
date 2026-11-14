@@ -5,16 +5,16 @@
    =================================================================== */
 
 :root {
-  --cream: #fbf6ee;            /* warm ivory page background */
+  --cream: #ecebe7;            /* warm stone page background */
   --paper: #ffffff;            /* cards sit brighter than the page */
   --ink: #2a211c;
-  --ink-soft: #6a5b4f;
-  --line: #eadfcf;
-  --terracotta: #b4503a;       /* warm terracotta — primary accent */
-  --terracotta-dark: #8e3a28;
+  --ink-soft: #62594f;
+  --line: #d1cfc6;
+  --terracotta: #7c2d3b;       /* deep wine — primary accent */
+  --terracotta-dark: #591f29;
   --sage: #5f7a5c;             /* soft sage — secondary accent */
   --gold: #c79a55;             /* warm brass — premium highlight */
-  --cream-deep: #f4e9db;       /* sand, for alternate sections */
+  --cream-deep: #deddd6;       /* darker stone, for alternate sections */
 
   --radius-s: 6px;
   --radius-m: 14px;
@@ -135,7 +135,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(251, 246, 238, .92);
+  background: rgba(236, 235, 231, .92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -515,7 +515,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 .chip:hover { border-color: var(--terracotta); }
 .chip.selected {
   border-color: var(--terracotta);
-  background: rgba(193,95,60,.08);
+  background: rgba(124,45,59,.07);
   color: var(--terracotta-dark);
 }
 .chip small { display: block; font-weight: 500; color: var(--ink-soft); font-size: .75rem; }
@@ -771,6 +771,8 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
   .hero { grid-template-columns: 1fr; }
   .hero-art { max-width: 420px; margin: 0 auto; }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
@@ -785,8 +787,6 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 @media (max-width: 640px) {
   .hero-bleed { aspect-ratio: auto; min-height: 0; }
   .hero-bleed-copy { position: relative; padding: 36px 20px; }
-  .nav-links { display: none; }
-  .nav-toggle { display: block; }
   .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
