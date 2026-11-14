@@ -84,7 +84,7 @@ function renderProductPage() {
 
   const waBtn = document.getElementById("productWaBtn");
   const updateWaLink = () => {
-    const sizeText = selectedSize ? `${selectedSize.label}, framed, ` : "";
+    const sizeText = selectedSize ? `${selectedSize.label}, simple frame, ` : "";
     if (p.status === "sold") {
       waBtn.textContent = "Ask About Similar Pieces";
       waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! "${p.title}" looks sold — do you have anything similar, or can you paint me something like it?`)}`;
