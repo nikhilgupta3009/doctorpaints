@@ -159,7 +159,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   white-space: nowrap;
 }
 .logo-tagline {
-  font-family: "Sacramento", cursive;
+  font-family: "Allura", "Alex Brush", cursive;
   font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: .03em;
