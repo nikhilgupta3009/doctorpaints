@@ -5,16 +5,16 @@
    =================================================================== */
 
 :root {
-  --cream: #ecebe7;            /* warm stone page background */
-  --paper: #ffffff;            /* cards sit brighter than the page */
-  --ink: #2a211c;
-  --ink-soft: #62594f;
-  --line: #d1cfc6;
+  --cream: #ffffff;
+  --paper: #ffffff;
+  --ink: #211d19;
+  --ink-soft: #5c5346;
+  --line: #e0e0de;
   --terracotta: #7c2d3b;       /* deep wine — primary accent */
   --terracotta-dark: #591f29;
-  --sage: #5f7a5c;             /* soft sage — secondary accent */
-  --gold: #c79a55;             /* warm brass — premium highlight */
-  --cream-deep: #deddd6;       /* darker stone, for alternate sections */
+  --sage: #4a5940;             /* deep forest — secondary accent */
+  --gold: #a9834a;             /* antique brass — premium highlight */
+  --cream-deep: #f2f2f0;
 
   --radius-s: 6px;
   --radius-m: 14px;
@@ -135,7 +135,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(236, 235, 231, .92);
+  background: rgba(255, 255, 255, .92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -152,8 +152,8 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   line-height: 1;
 }
 .logo-name {
-  font-family: "Great Vibes", "Alex Brush", cursive;
-  font-size: 2.7rem;
+  font-family: "Allura", "Alex Brush", cursive;
+  font-size: 3rem;
   font-weight: 400;
   color: var(--ink);
   white-space: nowrap;
@@ -785,6 +785,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .paper-guide { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
+  .logo-name { font-size: 2.6rem; }
   .hero-bleed { aspect-ratio: auto; min-height: 0; }
   .hero-bleed-copy { position: relative; padding: 36px 20px; }
   .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
