@@ -5,16 +5,16 @@
    =================================================================== */
 
 :root {
-  --cream: #ffffff;
-  --paper: #ffffff;
-  --ink: #211d19;
-  --ink-soft: #5c5346;
-  --line: #e0e0de;
-  --terracotta: #7c2d3b;       /* deep wine — primary accent */
-  --terracotta-dark: #591f29;
-  --sage: #4a5940;             /* deep forest — secondary accent */
-  --gold: #a9834a;             /* antique brass — premium highlight */
-  --cream-deep: #f2f2f0;
+  --cream: #fbf6ee;            /* warm ivory page background */
+  --paper: #ffffff;            /* cards sit brighter than the page */
+  --ink: #2a211c;
+  --ink-soft: #6a5b4f;
+  --line: #eadfcf;
+  --terracotta: #b4503a;       /* warm terracotta — primary accent */
+  --terracotta-dark: #8e3a28;
+  --sage: #5f7a5c;             /* soft sage — secondary accent */
+  --gold: #c79a55;             /* warm brass — premium highlight */
+  --cream-deep: #f4e9db;       /* sand, for alternate sections */
 
   --radius-s: 6px;
   --radius-m: 14px;
@@ -135,7 +135,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, .92);
+  background: rgba(251, 246, 238, .92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -151,26 +151,21 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   gap: 2px;
   line-height: 1;
 }
-@font-face {
-  font-family: "Satisfy";
-  src: url("../assets/fonts/Satisfy-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 .logo-name {
-  font-family: "Satisfy", "Alex Brush", cursive;
-  font-size: 2.1rem;
+  font-family: "Great Vibes", "Alex Brush", cursive;
+  font-size: 2.7rem;
   font-weight: 400;
   color: var(--ink);
+  white-space: nowrap;
 }
 .logo-tagline {
   font-family: "Sacramento", cursive;
-  font-size: 1.05rem;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: .03em;
   text-transform: none;
-  color: var(--ink-soft);
+  color: var(--terracotta);
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -788,6 +783,8 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .paper-guide { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
+  .hero-bleed { aspect-ratio: auto; min-height: 0; }
+  .hero-bleed-copy { position: relative; padding: 36px 20px; }
   .nav-links { display: none; }
   .nav-toggle { display: block; }
   .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; }
