@@ -57,7 +57,16 @@ function renderProductPage() {
   const mediumEl = document.getElementById("productMedium");
   if (p.medium) mediumEl.textContent = p.medium;
   else mediumEl.remove();
-  document.getElementById("productPrice").textContent = p.status === "sold" ? "Sold" : money(p.price);
+  const priceEl = document.getElementById("productPrice");
+  let selectedSize = p.sizes ? p.sizes[0] : null;
+  const currentPrice = () => (selectedSize ? selectedSize.price : p.price);
+  priceEl.textContent = p.status === "sold" ? "Sold" : money(currentPrice());
+
+  if (p.priceNote) {
+    const noteEl = document.getElementById("productPriceNote");
+    noteEl.textContent = p.priceNote;
+    noteEl.style.display = "";
+  }
 
   const desc = document.getElementById("productDesc");
   if (p.bullets) {
@@ -74,15 +83,39 @@ function renderProductPage() {
     : "This is a one-of-a-kind original — only one exists. We'll confirm availability and shipping/Porter delivery on WhatsApp.";
 
   const waBtn = document.getElementById("productWaBtn");
-  if (p.status === "sold") {
-    waBtn.textContent = "Ask About Similar Pieces";
-    waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! "${p.title}" looks sold — do you have anything similar, or can you paint me something like it?`)}`;
-  } else if (section.custom) {
-    waBtn.textContent = "Customise on WhatsApp";
-    waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'd love a personalised "${p.title}" piece (${money(p.price)}). Can we talk about the details?`)}`;
-  } else {
-    waBtn.textContent = "Enquire on WhatsApp";
-    waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'm interested in the original "${p.title}" (${[p.medium, money(p.price)].filter(Boolean).join(", ")}). Is it still available?`)}`;
+  const updateWaLink = () => {
+    const sizeText = selectedSize ? `${selectedSize.label}, framed, ` : "";
+    if (p.status === "sold") {
+      waBtn.textContent = "Ask About Similar Pieces";
+      waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! "${p.title}" looks sold — do you have anything similar, or can you paint me something like it?`)}`;
+    } else if (section.custom) {
+      waBtn.textContent = "Customise on WhatsApp";
+      waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'd love a personalised "${p.title}" piece (${sizeText}${money(currentPrice())}). Can we talk about the details?`)}`;
+    } else {
+      waBtn.textContent = "Enquire on WhatsApp";
+      waBtn.href = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi ${BRAND.name}! I'm interested in the original "${p.title}" (${[p.medium, money(p.price)].filter(Boolean).join(", ")}). Is it still available?`)}`;
+    }
+  };
+  updateWaLink();
+
+  if (p.sizes && p.status !== "sold") {
+    const sizesEl = document.getElementById("productSizes");
+    const optionsEl = document.getElementById("productSizeOptions");
+    optionsEl.innerHTML = p.sizes
+      .map(
+        (s, i) =>
+          `<button type="button" class="${i === 0 ? "active" : ""}" data-size="${s.id}">${s.label}<small>${s.dims}</small></button>`
+      )
+      .join("");
+    sizesEl.style.display = "";
+    optionsEl.addEventListener("click", (e) => {
+      const btn = e.target.closest("button");
+      if (!btn) return;
+      selectedSize = p.sizes.find((s) => s.id === btn.dataset.size);
+      optionsEl.querySelectorAll("button").forEach((b) => b.classList.toggle("active", b === btn));
+      priceEl.textContent = money(currentPrice());
+      updateWaLink();
+    });
   }
 }
 

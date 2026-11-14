@@ -261,7 +261,12 @@ const STORY_ART = [
     ],
     wholeImages: ["assets/images/expressions/beauty-of-life-room-2.webp"],
     medium: "Personalised keepsake · fully customisable",
-    price: 2799,
+    price: 2999,
+    sizes: [
+      { id: "a5", label: "A5", dims: "14.8 × 21 cm", price: 2999 },
+      { id: "a4", label: "A4", dims: "21 × 29.7 cm", price: 4499 },
+    ],
+    priceNote: "Framed and made to order, including the colour-scheme consultation. Delivery is charged separately, based on your location.",
     status: "available",
     isNew: true,
     description: [
@@ -287,7 +292,12 @@ const STORY_ART = [
       "assets/images/expressions/eat-love-dance-room-2.webp",
     ],
     medium: "Personalised keepsake · fully customisable",
-    price: 2799,
+    price: 2999,
+    sizes: [
+      { id: "a5", label: "A5", dims: "14.8 × 21 cm", price: 2999 },
+      { id: "a4", label: "A4", dims: "21 × 29.7 cm", price: 4499 },
+    ],
+    priceNote: "Framed and made to order, including the colour-scheme consultation. Delivery is charged separately, based on your location.",
     status: "available",
     isNew: true,
     description: [
